@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Hozeh — Marketing &amp; Technology That Drives Growth</title>
+<meta name="description" content="Hozeh is a marketing and technology company that helps businesses build stronger brands, create demand, and grow through strategy, creativity, and technology.">
+<meta name="theme-color" content="#000000">
+<meta property="og:image" content="assets/og-image.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Roboto+Flex:opsz,wght,wdth@8..144,100..1000,25..151&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#000;color:#fff}
+body{font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:#fff;text-decoration:none}a:hover{color:#fff}
+::selection{background:hsl(272 85% 62%);color:#fff}
+:focus-visible{outline:2px solid hsl(272 70% 60%);outline-offset:3px}
+@keyframes hzPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+@keyframes hzShine{0%{background-position:150% 0}100%{background-position:-50% 0}}
+@keyframes hzFeedUp{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+@keyframes hzFeedDown{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+@keyframes hzBob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(.8deg)}}
+@keyframes hzCue{0%{top:-10px;opacity:0}20%{opacity:1}100%{top:100%;opacity:0}}
+@keyframes hzSway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes hzBlink{50%{opacity:0}}
+@keyframes hzRx{0%{opacity:0;transform:translateX(-30px) rotate(-4deg)}6%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes hzScan{0%,8%{top:0;opacity:0}10%{opacity:1}28%{top:100%;opacity:1}30%,100%{top:100%;opacity:0}}
+@keyframes hzK20{0%,19%{opacity:0;transform:translateY(8px)}22%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes hzK35{0%,34%{opacity:0;transform:translateY(8px)}37%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes hzK50{0%,49%{opacity:0;transform:translateY(8px)}52%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes hzK65{0%,64%{opacity:0;transform:translateY(8px)}67%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes hzK80{0%,79%{opacity:0;transform:translateY(8px)}82%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes hzRing{0%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}100%{box-shadow:0 0 0 14px rgba(255,255,255,0)}}
+@keyframes hzSpin{to{transform:rotate(360deg)}}
+@keyframes hzBarIn{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes hzDiagIn{from{transform:translate(-80px,60px);opacity:0}to{transform:none;opacity:1}}
+@keyframes hzRock{0%,100%{transform:rotateY(-32deg) rotateX(10deg)}50%{transform:rotateY(32deg) rotateX(-8deg)}}
+</style>
+</helmet>
+
+<dc-import name="SiteNav" active="" hint-size="100%,1px"></dc-import>
+
+<div data-preloader="1" aria-hidden="true" style="position:fixed;inset:0;z-index:100;background:#000;display:none;flex-direction:column;align-items:center;justify-content:center;gap:28px;clip-path:inset(0 0 0 0);transition:clip-path 1s cubic-bezier(.77,0,.18,1);cursor:pointer">
+<svg viewBox="440 430 920 940" width="88" height="90" style="overflow:visible;filter:drop-shadow(0 0 18px rgba(255,255,255,.55)) drop-shadow(0 0 60px hsl(272 85% 62% / .45))"><g fill="#fff">
+<path d="M455 665H740V765.6L455 977.7Z" style="transform-origin:600px 1360px;animation:hzBarIn .6s cubic-bezier(.16,1,.3,1) both"></path>
+<path d="M455 1041.25L665 1330L740 1273.4V1360H455Z" style="transform-origin:600px 1360px;animation:hzBarIn .6s cubic-bezier(.16,1,.3,1) both"></path>
+<path d="M1060 440H1345V743L1140 468L1060 527.5Z" style="transform-origin:1200px 440px;animation:hzBarIn .6s cubic-bezier(.16,1,.3,1) .12s both"></path>
+<path d="M1060 1031.7L1345 816.4V1135H1060Z" style="transform-origin:1200px 440px;animation:hzBarIn .6s cubic-bezier(.16,1,.3,1) .12s both"></path>
+<path d="M520 1020L1125 570L1280 780L675 1228Z" style="animation:hzDiagIn .7s cubic-bezier(.16,1,.3,1) .45s both"></path>
+</g></svg>
+<span data-pl-count="1" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.7)">00</span>
+<span style="position:absolute;bottom:32px;right:32px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.45)">SKIP</span>
+</div>
+
+<main id="main">
+
+<section data-hero="1" aria-labelledby="hero-h" data-screen-label="Home hero" style="position:relative;height:150vh;background:#000">
+<div style="position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;perspective:1400px;perspective-origin:50% 100%">
+<div data-hero-screen="1" style="position:absolute;inset:0;overflow:hidden;transform-origin:50% 100%;will-change:transform;box-shadow:0 0 0 1px rgba(255,255,255,.06)">
+<dc-import name="BgVideo" src="assets/video/hf_20260624_052448_43259007-b7c4-4269-90bd-e3ab14e80075.mp4" eager="{{ true }}" treatment="duotone" tint="{{ 0.22 }}" hint-size="100%,100%" style="position:absolute;inset:0"></dc-import>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.3) 50%, transparent 100%)"></div>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:16rem;background:linear-gradient(to top,#000,transparent)"></div>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:7rem;backdrop-filter:blur(1px);-webkit-backdrop-filter:blur(1px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 40%);mask-image:linear-gradient(to bottom,transparent,#000 40%)"></div>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:5rem;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 50%);mask-image:linear-gradient(to bottom,transparent,#000 50%)"></div>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3rem;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 60%);mask-image:linear-gradient(to bottom,transparent,#000 60%)"></div>
+</div>
+
+<div data-hero-content="1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding-top:100px;padding-bottom:clamp(64px,10vh,128px)">
+<div style="max-width:1920px;width:100%;margin:0 auto;padding:0 clamp(20px,3vw,44px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:40px">
+<div style="flex:1 1 480px;max-width:900px;display:flex;flex-direction:column;gap:clamp(10px,2.2vh,26px)">
+<div data-in="0" style="align-self:flex-start;display:inline-flex;align-items:center;gap:12px;padding:9px 16px 9px 14px;border-radius:999px;background:rgba(255,255,255,.04);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.1)">
+<span aria-hidden="true" style="width:7px;height:7px;border-radius:999px;background:#fff;box-shadow:0 0 12px #fff;animation:hzPulse 2s ease-in-out infinite"></span>
+<span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;background:linear-gradient(110deg,#8a8a8a 35%,#fff 50%,#8a8a8a 65%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:hzShine 3s linear infinite">Marketing × Technology</span>
+</div>
+<h1 id="hero-h" data-split="1" style="margin:0;font-size:clamp(2.2rem,min(8vw,10vh),7.5rem);font-weight:500;letter-spacing:-0.04em;line-height:.95">
+<span style="display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em"><span data-lni="1" style="display:block">Marketing is more</span></span>
+<span style="display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em"><span data-lni="1" style="display:block">than content.</span></span>
+<span style="display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em"><span data-lni="1" style="display:block">We know how to <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-0.01em">sell.</em></span></span>
+</h1>
+<p data-in=".3" style="margin:0;display:flex;align-items:center;flex-wrap:wrap;gap:12px;font-size:clamp(1.05rem,min(2vw,3.2vh),1.7rem);letter-spacing:-0.02em">
+<span style="color:rgba(255,255,255,.7)">We</span>
+<span style="display:inline-flex;align-items:center;height:1.75em;padding:0 16px;border-radius:14px;overflow:hidden;background:rgba(255,255,255,.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.1);font-weight:500"><span data-rot-ph="1">build brands.</span><span data-rot="build brands.|create demand.|engineer growth.|ship software." style="display:inline-flex;white-space:pre"></span></span>
+</p>
+<p data-in=".4" data-hero-lead="1" style="margin:0;max-width:36rem;font-size:clamp(.95rem,min(1.25vw,2.2vh),1.15rem);line-height:1.5;color:rgba(239,242,245,.8)">Hozeh is a marketing and technology company helping businesses build stronger brands, create demand, and grow through strategy, creativity, and technology.</p>
+<div data-in=".5" style="display:flex;flex-wrap:wrap;gap:12px">
+<a href="Contact.dc.html" style="display:inline-flex;align-items:center;height:56px;padding:0 30px;border-radius:999px;background:#fff;color:#000;font-weight:500;font-size:16px;transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease" style-hover="transform:scale(1.03);box-shadow:0 0 40px -8px hsl(272 85% 62% / .6);color:#000" style-active="transform:scale(.98)">Start a Conversation</a>
+<a href="Work.dc.html" style="display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 26px;border-radius:999px;color:#fff;font-size:16px;background:rgba(255,255,255,.05);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.12)" style-hover="background:rgba(255,255,255,.12)">Explore Our Work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+
+<div data-in=".6" data-hero-cards="1" style="perspective:1000px"><div data-depth="16" style="display:flex;flex-direction:column;gap:20px;transition:transform .5s ease-out">
+<div style="width:256px;padding:24px;border-radius:20px;background:rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 1px 1px rgba(255,255,255,.18), inset 0 0 0 1px rgba(255,255,255,.08), 0 30px 60px -30px rgba(0,0,0,.9);display:flex;flex-direction:column;gap:10px;transition:transform .5s ease-out">
+<span style="font-family:'Anton',sans-serif;font-size:48px;line-height:1;letter-spacing:.01em">Millions</span>
+<p style="margin:0;font-size:14px;line-height:1.5;color:rgba(255,255,255,.78)">of views on reels — as one part of a bigger growth strategy.</p>
+<span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);padding-top:8px;border-top:1px solid rgba(255,255,255,.12)">Chai Sutta Bar · Chennai</span>
+</div>
+<div style="width:256px;padding:20px 20px 10px;border-radius:20px;background:rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 1px 1px rgba(255,255,255,.18), inset 0 0 0 1px rgba(255,255,255,.08), 0 30px 60px -30px rgba(0,0,0,.9);display:flex;flex-direction:column;transition:transform .5s ease-out">
+<div style="display:flex;align-items:center;gap:10px;padding-bottom:10px"><span aria-hidden="true" style="width:6px;height:6px;border-radius:999px;background:#fff;box-shadow:0 0 10px #fff;animation:hzPulse 2s ease-in-out infinite"></span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7)">Now building</span></div>
+<a href="Technology.dc.html#call-e" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.1)"><span style="display:flex;flex-direction:column;gap:3px"><b style="font-weight:500;font-size:15px">CALL-E</b><small style="font-size:12px;color:rgba(255,255,255,.6)">AI healthcare workflow · prototype</small></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+<a href="Technology.dc.html#builder" style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.1)"><span style="display:flex;flex-direction:column;gap:3px"><b style="font-weight:500;font-size:15px">AI Website Builder</b><small style="font-size:12px;color:rgba(255,255,255,.6)">Idea → working app</small></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+<div data-cue="1" aria-hidden="true" style="position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px">
+<div style="position:relative;width:1px;height:48px;background:rgba(255,255,255,.2);overflow:hidden"><i style="position:absolute;left:-1px;width:3px;height:10px;background:#fff;border-radius:2px;animation:hzCue 2.2s ease-in-out infinite"></i></div>
+<span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.3em;color:rgba(255,255,255,.55)">SCROLL</span>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="vis-h" data-screen-label="More than visibility" style="position:relative;padding:clamp(100px,12vw,180px) 0 clamp(40px,5vw,72px)">
+<div style="max-width:1920px;margin:0 auto;padding:0 clamp(20px,3vw,44px);display:flex;flex-wrap:wrap;gap:40px">
+<span data-in="0" style="flex:1 1 100%;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);padding-top:14px">01 — The problem</span>
+<div style="flex:1 1 100%;min-width:0;display:flex;flex-direction:column;gap:clamp(36px,5vw,64px);max-width:1200px">
+<h2 id="vis-h" data-split="1" style="margin:0;font-size:clamp(2.25rem,5vw,4.5rem);font-weight:500;letter-spacing:-0.04em;line-height:1">
+<span style="display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em"><span data-lni="1" style="display:block">Your business needs more than</span></span>
+<span style="display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em"><span data-lni="1" style="display:block"><em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">visibility.</em></span></span>
+</h2>
+<p data-words="1" aria-label="Likes, views, and followers can be useful. But growth starts deeper. We understand the business first, identify the gaps, build a strategy around them — then execute, measure, and adapt until we find what works." style="margin:0;font-size:clamp(1.5rem,3.4vw,3rem);font-weight:500;letter-spacing:-1px;line-height:1.18"><sc-for list="{{ visWords }}" as="w" hint-placeholder-count="30"><span data-w="1" aria-hidden="true" style="display:inline-block;margin-right:.26em;opacity:.12;filter:blur(6px);transform:rotate(2deg);transform-origin:0 100%;transition:opacity .35s ease, filter .35s ease, transform .35s ease">{{ w }}</span></sc-for></p>
+<div data-in="0" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)"><span>Strategy before content</span><span aria-hidden="true" style="width:5px;height:5px;border-radius:9px;background:rgba(255,255,255,.5)"></span><span>Business before vanity metrics</span></div>
+</div>
+</div>
+</section>
+
+<section data-reels="1" aria-labelledby="reel-h" data-screen-label="Reels aren't a strategy" style="position:relative;height:240vh">
+<div style="position:sticky;top:0;height:100vh;height:100svh;overflow:hidden">
+<div data-feed="1" aria-hidden="true" style="position:absolute;inset:0;opacity:.4;transition:opacity 1.2s ease;perspective:1100px">
+<div style="position:absolute;left:50%;top:50%;width:1400px;height:1800px;margin:-900px 0 0 -700px;display:flex;justify-content:center;gap:22px;transform:rotateX(52deg) rotateZ(-16deg) translateZ(-120px);transform-style:preserve-3d">
+<div data-col="1" style="display:flex;flex-direction:column;gap:18px;padding-bottom:18px;width:210px;animation:hzFeedUp 38s linear infinite"><sc-for list="{{ tiles }}" as="t" hint-placeholder-count="12"><div style="aspect-ratio:9/16;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);position:relative;flex:none"><div style="position:absolute;left:50%;top:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:999px;border:1px solid rgba(255,255,255,.45);display:grid;place-items:center"><div style="width:0;height:0;border-left:11px solid rgba(255,255,255,.65);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:4px"></div></div><div style="position:absolute;right:12px;bottom:56px;display:flex;flex-direction:column;gap:12px"><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.3)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.16)"></i></div><div style="position:absolute;left:14px;bottom:16px;display:flex;flex-direction:column;gap:6px"><i style="display:block;width:110px;height:6px;border-radius:4px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:70px;height:6px;border-radius:4px;background:rgba(255,255,255,.14)"></i></div></div></sc-for></div>
+<div data-col="1" style="display:flex;flex-direction:column;gap:18px;padding-bottom:18px;width:210px;margin-top:-180px;animation:hzFeedDown 46s linear infinite"><sc-for list="{{ tiles }}" as="t" hint-placeholder-count="12"><div style="aspect-ratio:9/16;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);position:relative;flex:none"><div style="position:absolute;left:50%;top:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:999px;border:1px solid rgba(255,255,255,.45);display:grid;place-items:center"><div style="width:0;height:0;border-left:11px solid rgba(255,255,255,.65);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:4px"></div></div><div style="position:absolute;right:12px;bottom:56px;display:flex;flex-direction:column;gap:12px"><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.3)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.16)"></i></div><div style="position:absolute;left:14px;bottom:16px;display:flex;flex-direction:column;gap:6px"><i style="display:block;width:110px;height:6px;border-radius:4px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:70px;height:6px;border-radius:4px;background:rgba(255,255,255,.14)"></i></div></div></sc-for></div>
+<div data-col="1" style="display:flex;flex-direction:column;gap:18px;padding-bottom:18px;width:210px;animation:hzFeedUp 30s linear infinite"><sc-for list="{{ tiles }}" as="t" hint-placeholder-count="12"><div style="aspect-ratio:9/16;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);position:relative;flex:none"><div style="position:absolute;left:50%;top:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:999px;border:1px solid rgba(255,255,255,.45);display:grid;place-items:center"><div style="width:0;height:0;border-left:11px solid rgba(255,255,255,.65);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:4px"></div></div><div style="position:absolute;right:12px;bottom:56px;display:flex;flex-direction:column;gap:12px"><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.3)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.16)"></i></div><div style="position:absolute;left:14px;bottom:16px;display:flex;flex-direction:column;gap:6px"><i style="display:block;width:110px;height:6px;border-radius:4px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:70px;height:6px;border-radius:4px;background:rgba(255,255,255,.14)"></i></div></div></sc-for></div>
+<div data-col="1" style="display:flex;flex-direction:column;gap:18px;padding-bottom:18px;width:210px;margin-top:-320px;animation:hzFeedDown 40s linear infinite"><sc-for list="{{ tiles }}" as="t" hint-placeholder-count="12"><div style="aspect-ratio:9/16;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);position:relative;flex:none"><div style="position:absolute;left:50%;top:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:999px;border:1px solid rgba(255,255,255,.45);display:grid;place-items:center"><div style="width:0;height:0;border-left:11px solid rgba(255,255,255,.65);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:4px"></div></div><div style="position:absolute;right:12px;bottom:56px;display:flex;flex-direction:column;gap:12px"><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.3)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.16)"></i></div><div style="position:absolute;left:14px;bottom:16px;display:flex;flex-direction:column;gap:6px"><i style="display:block;width:110px;height:6px;border-radius:4px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:70px;height:6px;border-radius:4px;background:rgba(255,255,255,.14)"></i></div></div></sc-for></div>
+<div data-col="1" style="display:flex;flex-direction:column;gap:18px;padding-bottom:18px;width:210px;margin-top:-90px;animation:hzFeedUp 34s linear infinite"><sc-for list="{{ tiles }}" as="t" hint-placeholder-count="12"><div style="aspect-ratio:9/16;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);position:relative;flex:none"><div style="position:absolute;left:50%;top:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:999px;border:1px solid rgba(255,255,255,.45);display:grid;place-items:center"><div style="width:0;height:0;border-left:11px solid rgba(255,255,255,.65);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:4px"></div></div><div style="position:absolute;right:12px;bottom:56px;display:flex;flex-direction:column;gap:12px"><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.3)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:16px;height:16px;border-radius:9px;background:rgba(255,255,255,.16)"></i></div><div style="position:absolute;left:14px;bottom:16px;display:flex;flex-direction:column;gap:6px"><i style="display:block;width:110px;height:6px;border-radius:4px;background:rgba(255,255,255,.22)"></i><i style="display:block;width:70px;height:6px;border-radius:4px;background:rgba(255,255,255,.14)"></i></div></div></sc-for></div>
+</div>
+</div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(70% 60% at 30% 50%, rgba(0,0,0,.85), rgba(0,0,0,.35) 70%, rgba(0,0,0,.6)),linear-gradient(#000 0%, transparent 18%, transparent 82%, #000 100%)"></div>
+
+<div style="position:relative;height:100%;max-width:1920px;margin:0 auto;padding:clamp(96px,14vh,140px) clamp(20px,3vw,44px) 0;display:grid;align-items:start">
+<div data-phase-a="1" style="grid-area:1/1;display:flex;flex-direction:column;gap:clamp(24px,4vh,44px);transition:opacity .8s ease, transform .9s cubic-bezier(.16,1,.3,1)">
+<span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)">02 — The treadmill</span>
+<h2 id="reel-h" style="margin:0;font-size:clamp(2.75rem,7vw,6.5rem);font-weight:500;letter-spacing:-0.045em;line-height:.95">Reels aren't a <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">strategy.</em></h2>
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:clamp(1.5rem,3vw,2.6rem);font-weight:500;letter-spacing:-0.03em">
+<li data-strike="1" style="position:relative;align-self:flex-start;transition:opacity .6s ease">Create a reel.<span data-bar="1" aria-hidden="true" style="position:absolute;left:-4px;right:-4px;top:52%;height:3px;background:#fff;transform:scaleX(0);transform-origin:0 50%;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span></li>
+<li data-strike="1" style="position:relative;align-self:flex-start;transition:opacity .6s ease">Post a reel.<span data-bar="1" aria-hidden="true" style="position:absolute;left:-4px;right:-4px;top:52%;height:3px;background:#fff;transform:scaleX(0);transform-origin:0 50%;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span></li>
+<li data-strike="1" style="position:relative;align-self:flex-start;transition:opacity .6s ease">Make another reel.<span data-bar="1" aria-hidden="true" style="position:absolute;left:-4px;right:-4px;top:52%;height:3px;background:#fff;transform:scaleX(0);transform-origin:0 50%;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span></li>
+<li data-strike="1" style="position:relative;align-self:flex-start;transition:opacity .6s ease">Repeat.<span data-bar="1" aria-hidden="true" style="position:absolute;left:-4px;right:-4px;top:52%;height:3px;background:#fff;transform:scaleX(0);transform-origin:0 50%;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span></li>
+</ol>
+</div>
+<div data-phase-b="1" style="grid-area:1/1;display:flex;flex-direction:column;gap:28px;max-width:1100px;opacity:0;transform:translateY(30px);transition:opacity .9s ease, transform 1s cubic-bezier(.16,1,.3,1)">
+<p style="margin:0;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(2.75rem,7vw,6.5rem);line-height:.98;letter-spacing:-0.01em">A reel is a format.<br><span style="color:rgba(255,255,255,.6)">It's not a strategy.</span></p>
+<span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)">Real marketing is</span>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px">
+<sc-for list="{{ chips }}" as="c" hint-placeholder-count="8"><li data-chip="1" style="padding:11px 18px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;background:{{ c.bg }};color:{{ c.color }};backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.12);opacity:0;transform:translateY(12px) scale(.96);transition:opacity .5s ease, transform .6s cubic-bezier(.16,1,.3,1)">{{ c.label }}</li></sc-for>
+</ul>
+<p data-tag="1" style="margin:8px 0 0;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(1.5rem,2.4vw,2.2rem);color:rgba(255,255,255,.9);opacity:0;transform:translateY(12px);transition:opacity .7s ease, transform .8s cubic-bezier(.16,1,.3,1)">That's what Hozeh was built to do.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="method-h" data-screen-label="The Hozeh Method" style="position:relative;z-index:1;background:#fff;color:#000;border-radius:clamp(40px,5vw,60px) clamp(40px,5vw,60px) 0 0;padding:clamp(96px,12vw,160px) 0 clamp(140px,16vw,220px)">
+<div style="max-width:1920px;margin:0 auto;padding:0 clamp(20px,3vw,44px)">
+<span data-in="0" style="display:block;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.55)">The Hozeh Method</span>
+<h2 id="method-h" data-tf="1" aria-label="Understand. Build. Measure. Evolve." style="position:relative;margin:28px 0 0;display:flex;flex-wrap:wrap;gap:.1em .35em;font-size:clamp(2.5rem,7.4vw,7.5rem);font-weight:500;letter-spacing:-0.05em;line-height:1">
+<span data-tfw="1" aria-hidden="true" style="transition:filter .5s ease, opacity .5s ease">Understand</span>
+<span data-tfw="1" aria-hidden="true" style="transition:filter .5s ease, opacity .5s ease">Build</span>
+<span data-tfw="1" aria-hidden="true" style="transition:filter .5s ease, opacity .5s ease">Measure</span>
+<span data-tfw="1" aria-hidden="true" style="transition:filter .5s ease, opacity .5s ease">Evolve</span>
+<span data-tff="1" aria-hidden="true" style="position:absolute;left:0;top:0;width:0;height:0;pointer-events:none;transition:all .55s cubic-bezier(.16,1,.3,1);filter:drop-shadow(0 0 8px hsla(272,85%,62%,.5))">
+<i style="position:absolute;left:0;top:0;width:18px;height:18px;border-left:3px solid hsl(272 85% 62%);border-top:3px solid hsl(272 85% 62%);border-radius:4px 0 0 0"></i>
+<i style="position:absolute;right:0;top:0;width:18px;height:18px;border-right:3px solid hsl(272 85% 62%);border-top:3px solid hsl(272 85% 62%);border-radius:0 4px 0 0"></i>
+<i style="position:absolute;left:0;bottom:0;width:18px;height:18px;border-left:3px solid hsl(272 85% 62%);border-bottom:3px solid hsl(272 85% 62%);border-radius:0 0 0 4px"></i>
+<i style="position:absolute;right:0;bottom:0;width:18px;height:18px;border-right:3px solid hsl(272 85% 62%);border-bottom:3px solid hsl(272 85% 62%);border-radius:0 0 4px 0"></i>
+</span>
+</h2>
+<p data-in=".1" style="margin:28px 0 0;font-size:clamp(1.25rem,2.2vw,2rem);letter-spacing:-0.02em;color:rgba(0,0,0,.75)">We don't begin with a template. <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#000">We begin with the business.</em></p>
+
+<div style="margin-top:clamp(56px,8vw,110px);display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,96px);align-items:flex-start">
+<ol style="flex:1 1 520px;min-width:0;list-style:none;margin:0;padding:0;border-bottom:1px solid rgba(0,0,0,.15)">
+<sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
+<li data-step="{{ s.name }}" style="display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:start;padding:clamp(28px,4vw,52px) 0;border-top:1px solid rgba(0,0,0,.15);opacity:.35;transition:opacity .6s ease">
+<span style="font-family:'Anton',sans-serif;font-size:clamp(3rem,10vw,140px);line-height:.82;letter-spacing:-0.01em">{{ s.n }}</span>
+<div style="padding-top:.4em;display:flex;flex-direction:column;gap:12px">
+<h3 style="margin:0;font-size:clamp(1.1rem,1.6vw,1.5rem);font-weight:600;letter-spacing:.06em">{{ s.title }}</h3>
+<p style="margin:0;max-width:34ch;font-size:clamp(1rem,1.2vw,1.15rem);line-height:1.5;color:rgba(0,0,0,.6)">{{ s.desc }}</p>
+</div>
+</li>
+</sc-for>
+</ol>
+<div data-dsticky="1" style="flex:1 1 420px;min-width:0;position:sticky;top:96px;perspective:1400px">
+<div data-tilt="8" data-life="1" style="position:relative;aspect-ratio:4/5;max-height:calc(100svh - 130px);margin:0 auto;border-radius:32px;overflow:hidden;background:#000;color:#fff;box-shadow:0 60px 100px -50px rgba(40,10,70,.55), 0 0 0 1px rgba(0,0,0,.1);transition:transform .5s ease-out">
+<div data-tilt-inner="1" style="position:absolute;inset:-4%;transition:transform .6s ease-out">
+<dc-import name="BgVideo" src="assets/video/hf_20260624_052448_43259007-b7c4-4269-90bd-e3ab14e80075.mp4" treatment="duotone" tint="{{ 0.18 }}" hint-size="100%,100%" style="position:absolute;inset:0"></dc-import>
+</div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 50%, rgba(0,0,0,.35), rgba(0,0,0,.8))"></div>
+<div aria-hidden="true" style="position:absolute;left:50%;top:50%;width:70%;height:70%;transform:translate(-50%,-50%);background:radial-gradient(50% 50% at 50% 50%, hsl(272 85% 62% / .22), transparent 70%)"></div>
+<div style="position:absolute;left:24px;right:24px;top:22px;display:flex;justify-content:space-between;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7)"><span>The loop</span><span data-loop-count="1">01 / 06</span></div>
+<svg viewBox="-90 -20 580 440" role="img" aria-label="A loop of six steps: Understand, Diagnose, Strategize, Execute, Measure, Evolve, returning to Understand" style="position:absolute;left:4%;right:4%;top:50%;width:92%;transform:translateY(-50%);overflow:visible">
+<defs><marker id="hzArr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="hsl(272 85% 62%)"></path></marker></defs>
+<circle cx="200" cy="200" r="150" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1.5"></circle>
+<circle data-prog="1" cx="200" cy="200" r="150" fill="none" stroke="#fff" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" transform="rotate(-90 200 200)" style="transition:stroke-dashoffset .9s cubic-bezier(.16,1,.3,1)"></circle>
+<path data-back="1" d="M70.1 125 A150 150 0 0 1 188 50.5" fill="none" stroke="hsl(272 85% 62%)" stroke-width="2.5" stroke-dasharray="4 6" marker-end="url(#hzArr)" style="opacity:0;transition:opacity .6s ease"></path>
+<circle data-node="1" cx="200" cy="50" r="9" fill="#000" stroke="#fff" stroke-width="1.5" style="transition:fill .4s ease"></circle>
+<circle data-node="1" cx="329.9" cy="125" r="9" fill="#000" stroke="#fff" stroke-width="1.5" style="transition:fill .4s ease"></circle>
+<circle data-node="1" cx="329.9" cy="275" r="9" fill="#000" stroke="#fff" stroke-width="1.5" style="transition:fill .4s ease"></circle>
+<circle data-node="1" cx="200" cy="350" r="9" fill="#000" stroke="#fff" stroke-width="1.5" style="transition:fill .4s ease"></circle>
+<circle data-node="1" cx="70.1" cy="275" r="9" fill="#000" stroke="#fff" stroke-width="1.5" style="transition:fill .4s ease"></circle>
+<circle data-node="1" cx="70.1" cy="125" r="9" fill="#000" stroke="#fff" stroke-width="1.5" style="transition:fill .4s ease"></circle>
+<g font-family="Geist Mono, monospace" font-size="11" letter-spacing="2.2">
+<text data-lbl="1" x="200" y="26" text-anchor="middle" fill="rgba(255,255,255,.45)">01 UNDERSTAND</text>
+<text data-lbl="1" x="346" y="118" fill="rgba(255,255,255,.45)">02 DIAGNOSE</text>
+<text data-lbl="1" x="346" y="290" fill="rgba(255,255,255,.45)">03 STRATEGIZE</text>
+<text data-lbl="1" x="200" y="382" text-anchor="middle" fill="rgba(255,255,255,.45)">04 EXECUTE</text>
+<text data-lbl="1" x="54" y="290" text-anchor="end" fill="rgba(255,255,255,.45)">05 MEASURE</text>
+<text data-lbl="1" x="54" y="118" text-anchor="end" fill="rgba(255,255,255,.45)">06 EVOLVE</text>
+</g>
+<text data-loop-center="1" x="200" y="212" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="44" fill="#fff">Understand</text>
+</svg>
+<div style="position:absolute;left:24px;right:24px;bottom:22px;font-size:14px;color:rgba(255,255,255,.72)">After 06, we loop back to 01.</div>
+</div>
+</div>
+</div>
+<p data-in="0" style="margin:clamp(72px,9vw,130px) 0 0;max-width:1100px;font-size:clamp(2rem,4.6vw,4.25rem);font-weight:500;letter-spacing:-0.04em;line-height:1.02;text-wrap:balance">The goal isn't to follow a plan. The goal is to <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">find what works.</em></p>
+</div>
+</section>
+
+<section aria-label="What we do: grow and build" data-screen-label="Grow / Build" style="position:relative;z-index:2;margin-top:-56px;background:#000;border-radius:clamp(40px,5vw,60px) clamp(40px,5vw,60px) 0 0;padding:clamp(20px,2vw,28px) 0 clamp(80px,10vw,140px)">
+<div style="max-width:1920px;margin:0 auto;padding:0 clamp(12px,2vw,28px)">
+<div style="display:flex;flex-wrap:wrap;gap:16px">
+<a href="WhatWeDo.dc.html#grow" data-pillar="1" data-tilt="4" data-life="1" style="flex:1 1 0;min-width:min(100%,340px);min-height:80vh;position:relative;border-radius:32px;overflow:hidden;background:#000;color:#fff;transition:flex-grow .9s cubic-bezier(.16,1,.3,1), transform .5s ease-out;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)">
+<div data-tilt-inner="1" style="position:absolute;inset:0;display:grid;place-items:center;transition:transform .6s ease-out">
+<div style="position:relative;width:min(84%,68vh);aspect-ratio:1;margin-top:-12%;animation:hzBob 9s ease-in-out infinite">
+<dc-import name="BgVideo" src="assets/video/hf_20260325_132944_a0d124bb-eaa1-4082-aa30-2310efb42b4b.mp4" treatment="duotone" tint="{{ 0.18 }}" fit="contain" hint-size="100%,100%" style="position:absolute;inset:0"></dc-import>
+</div>
+</div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.95) 0%, rgba(0,0,0,.55) 42%, rgba(0,0,0,.15) 100%)"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.6)">GROW</span>
+<span aria-hidden="true" style="font-size:clamp(4.5rem,11vw,11rem);font-weight:600;letter-spacing:-0.065em;line-height:.8;margin-left:-.04em">GROW</span>
+<h2 style="margin:6px 0 0;font-size:clamp(1.75rem,2.8vw,2.6rem);font-weight:500;letter-spacing:-0.03em">Make people <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">care.</em></h2>
+<p style="margin:0;max-width:30rem;line-height:1.55;color:rgba(255,255,255,.75)">We help businesses become easier to discover, harder to forget, and easier to trust.</p>
+<span style="display:inline-flex;align-items:center;gap:10px;margin-top:6px;font-weight:500">Explore Marketing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+</div>
+</a>
+<a href="Technology.dc.html" data-pillar="1" data-tilt="4" data-life="1" style="flex:1 1 0;min-width:min(100%,340px);min-height:80vh;position:relative;border-radius:32px;overflow:hidden;background:#000;color:#fff;transition:flex-grow .9s cubic-bezier(.16,1,.3,1), transform .5s ease-out;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)">
+<div data-tilt-inner="1" style="position:absolute;inset:-4%;transition:transform .6s ease-out">
+<dc-import name="BgVideo" src="assets/video/hf_20260803_192301_9231ed6b-c55c-4a48-909c-4ebe11cf2e11.mp4" treatment="duotone" tint="{{ 0.25 }}" hint-size="100%,100%" style="position:absolute;inset:0"></dc-import>
+</div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.95) 0%, rgba(0,0,0,.5) 45%, rgba(0,0,0,.3) 100%)"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.6)">BUILD</span>
+<span aria-hidden="true" style="font-size:clamp(4.5rem,11vw,11rem);font-weight:600;letter-spacing:-0.065em;line-height:.8;margin-left:-.04em">BUILD</span>
+<h2 style="margin:6px 0 0;font-size:clamp(1.75rem,2.8vw,2.6rem);font-weight:500;letter-spacing:-0.03em">Make what's <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">missing.</em></h2>
+<p style="margin:0;max-width:30rem;line-height:1.55;color:rgba(255,255,255,.75)">Sometimes growth needs more than a campaign. It needs a website, a product, an automation, an AI workflow, or completely new software.</p>
+<span style="display:inline-flex;align-items:center;gap:10px;margin-top:6px;font-weight:500">Explore Technology <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+</div>
+</a>
+</div>
+</div>
+<div aria-label="Capabilities" style="margin-top:clamp(64px,8vw,110px);display:flex;flex-direction:column;gap:14px;overflow:hidden;font-size:clamp(1.9rem,4vw,3rem);font-weight:500;letter-spacing:-0.03em;color:rgba(255,255,255,.8);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)">
+<div data-vel="40" style="display:flex;width:max-content;white-space:nowrap;will-change:transform"><span style="padding-right:.5em">{{ rowA }}</span><span aria-hidden="true" style="padding-right:.5em">{{ rowA }}</span></div>
+<div data-vel="-40" style="display:flex;width:max-content;white-space:nowrap;will-change:transform;color:rgba(255,255,255,.45)"><span style="padding-right:.5em">{{ rowB }}</span><span aria-hidden="true" style="padding-right:.5em">{{ rowB }}</span></div>
+</div>
+</section>
+
+<section aria-labelledby="work-h" data-screen-label="Selected work" style="position:relative;padding:clamp(40px,6vw,80px) 0 clamp(100px,12vw,160px)">
+<div style="max-width:1920px;margin:0 auto;padding:0 clamp(20px,3vw,44px)">
+<div data-life="1" style="position:relative;width:100%;height:clamp(440px,33vw,640px);border-radius:32px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)">
+<dc-import name="BgVideo" src="assets/video/hf_20260325_125119_8e5ae31c-0021-4396-bc08-f7aebeb877a2.mp4" treatment="duotone" tint="{{ 0.18 }}" hint-size="100%,100%" style="position:absolute;inset:0"></dc-import>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,.25) 55%, rgba(0,0,0,.1)),linear-gradient(90deg, rgba(0,0,0,.6), transparent 60%)"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(24px,3.5vw,52px);display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65)">Selected work</span>
+<h2 id="work-h" data-split="1" style="margin:0;font-size:clamp(2.5rem,6vw,5.75rem);font-weight:500;letter-spacing:-0.045em;line-height:.95">
+<span style="display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em"><span data-lni="1" style="display:block">Work that went</span></span>
+<span style="display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em"><span data-lni="1" style="display:block"><em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">beyond content.</em></span></span>
+</h2>
+<p style="margin:0;font-size:clamp(1rem,1.3vw,1.2rem);color:rgba(255,255,255,.78)">Different businesses. Different problems. Different solutions.</p>
+</div>
+</div>
+
+<div data-stack="1" style="margin-top:clamp(56px,7vw,96px)">
+<sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
+<article data-card="1" data-dsticky="1" style="position:sticky;top:{{ c.top }};margin-bottom:120px;border-radius:clamp(40px,4vw,56px);border:1px solid rgba(255,255,255,.15);background:#050505;padding:clamp(20px,2.6vw,40px);display:flex;flex-direction:column;gap:clamp(20px,2.6vw,36px);transform-origin:50% 0;will-change:transform;box-shadow:0 -30px 80px -40px rgba(0,0,0,1)">
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px">
+<span style="font-family:'Anton',sans-serif;font-size:clamp(3rem,6vw,5.5rem);line-height:.85">{{ c.n }}</span>
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:10px">
+<span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55)">{{ c.cat }}</span>
+<h3 style="margin:0;font-size:clamp(1.5rem,2.6vw,2.4rem);font-weight:500;letter-spacing:-0.03em;line-height:1.1">{{ c.client }} — <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">{{ c.title }}</em></h3>
+</div>
+<a href="{{ c.href }}" style="display:inline-flex;align-items:center;height:50px;padding:0 24px;border-radius:999px;border:2px solid rgba(255,255,255,.8);color:#fff;font-weight:500;white-space:nowrap;transition:background .3s ease, color .3s ease" style-hover="background:#fff;color:#000">View Case Study</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px">
+<div style="border-radius:28px;padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;gap:20px;background:rgba(255,255,255,.03);box-shadow:inset 0 1px 1px rgba(255,255,255,.12), inset 0 0 0 1px rgba(255,255,255,.08)">
+<span style="font-size:20px;font-weight:500">What we worked on</span>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ c.scope }}" as="s" hint-placeholder-count="6"><li style="padding:8px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)">{{ s }}</li></sc-for>
+</ul>
+</div>
+<div style="position:relative;width:100%;min-width:0;aspect-ratio:4/3;border-radius:32px;overflow:hidden;background:#000 repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 1px, transparent 1px 14px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)">
+<span style="position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:max-content;max-width:80%;text-align:center;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.4)">PROJECT VISUAL — ADD WITH CLIENT PERMISSION</span>
+<div style="position:absolute;left:14px;right:14px;bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 14px 14px 22px;border-radius:24px;background:rgba(255,255,255,.06);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.1)">
+<div style="display:flex;flex-direction:column;gap:5px;min-width:0"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55)">OUTCOME</span><b style="font-weight:500;font-size:clamp(15px,1.2vw,18px);line-height:1.3">{{ c.outcome }}</b></div>
+<a href="{{ c.href }}" aria-label="{{ c.aria }}" style="flex:none;width:48px;height:48px;border-radius:999px;background:hsl(272 85% 62%);display:grid;place-items:center;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.08)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+<!-- TODO confirm permission: Magic Box, Uno Minda, Koodeswaran Constructions -->
+<div style="display:flex;justify-content:center"><a href="Work.dc.html" style="display:inline-flex;align-items:center;gap:10px;font-size:20px;font-weight:500">See all work <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a></div>
+</div>
+</section>
+
+<section aria-labelledby="build-h" data-screen-label="What we build" style="position:relative;padding:clamp(100px,12vw,160px) 0;border-top:1px solid rgba(255,255,255,.08);overflow:hidden">
+<div aria-hidden="true" style="position:absolute;left:50%;top:25%;width:1200px;max-width:100%;height:760px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%, hsl(272 85% 62% / .13), transparent 70%)"></div>
+<div style="position:relative;max-width:1920px;margin:0 auto;padding:0 clamp(20px,3vw,44px)">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 48px">
+<h2 id="build-h" data-split="1" style="margin:0;font-size:clamp(2.5rem,6vw,5.75rem);font-weight:500;letter-spacing:-0.045em;line-height:.95">
+<span style="display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em"><span data-lni="1" style="display:block">And then there's</span></span>
+<span style="display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em"><span data-lni="1" style="display:block">what we <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">build.</em></span></span>
+</h2>
+<p data-in=".1" style="margin:0 0 10px;max-width:380px;font-size:clamp(1rem,1.25vw,1.15rem);line-height:1.55;color:rgba(255,255,255,.7)">We don't just use technology to market businesses. We build it too.</p>
+</div>
+
+<div style="margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;perspective:1600px">
+
+<article data-in="0" style="display:flex;flex-direction:column;gap:14px">
+<div data-tilt="6" data-hovercard="1" style="position:relative;padding:18px;border-radius:32px;background:rgba(255,255,255,.03);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.09);display:flex;flex-direction:column;gap:14px;transition:transform .5s ease-out">
+<div role="img" aria-label="CALL-E workflow: a prescription is uploaded, read by local OCR, reviewed by staff, confirmed by a call, and the outcome is logged" style="position:relative;aspect-ratio:1;border-radius:24px;overflow:hidden;background-color:#070707;background-image:radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);background-size:22px 22px;container-type:inline-size">
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(55% 45% at 50% 40%, hsl(272 85% 62% / .14), transparent 70%)"></div>
+<span style="position:absolute;left:5cqw;top:5cqw;font-family:'Geist Mono',monospace;font-size:2.6cqw;letter-spacing:.2em;color:rgba(255,255,255,.45)">RX · UPLOAD</span>
+<span data-decrypt="1" style="position:absolute;right:4.5cqw;top:4.2cqw;padding:1.3cqw 2.4cqw;border-radius:999px;border:1px solid rgba(255,255,255,.35);font-family:'Geist Mono',monospace;font-size:2.4cqw;letter-spacing:.2em;color:#fff">PROTOTYPE</span>
+<div style="position:absolute;left:14cqw;top:15cqw;width:58cqw;padding:5cqw;border-radius:4cqw;background:#111;border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 40px -20px rgba(0,0,0,.9);overflow:hidden;animation:hzRx 10s cubic-bezier(.16,1,.3,1) infinite">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4cqw"><span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:7cqw;line-height:1">Rx</span><i style="display:block;width:12cqw;height:1.6cqw;border-radius:1cqw;background:rgba(255,255,255,.25)"></i></div>
+<div style="display:flex;flex-direction:column;gap:2.4cqw"><i style="display:block;width:44cqw;height:1.6cqw;border-radius:1cqw;background:rgba(255,255,255,.35)"></i><i style="display:block;width:34cqw;height:1.6cqw;border-radius:1cqw;background:rgba(255,255,255,.18)"></i><i style="display:block;width:39cqw;height:1.6cqw;border-radius:1cqw;background:rgba(255,255,255,.18)"></i><i style="display:block;width:23cqw;height:1.6cqw;border-radius:1cqw;background:rgba(255,255,255,.18)"></i></div>
+<span aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:2px;background:#fff;box-shadow:0 0 14px 2px rgba(255,255,255,.7), 0 0 30px 6px hsl(272 85% 62% / .45);animation:hzScan 10s linear infinite"></span>
+</div>
+<span style="position:absolute;left:14cqw;top:57cqw;font-family:'Geist Mono',monospace;font-size:2.5cqw;letter-spacing:.2em;color:rgba(255,255,255,.55);animation:hzK20 10s linear infinite">LOCAL OCR · READ</span>
+<div style="position:absolute;left:14cqw;top:63.5cqw;display:flex;align-items:center;gap:2cqw;padding:2cqw 3.4cqw;border-radius:999px;font-size:3.2cqw;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);animation:hzK35 10s cubic-bezier(.16,1,.3,1) infinite"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg> Staff review</div>
+<div style="position:absolute;left:14cqw;top:75cqw;display:flex;align-items:center;gap:2.4cqw;padding:1.6cqw 3.6cqw 1.6cqw 1.6cqw;border-radius:999px;font-size:3.2cqw;background:#fff;color:#000;animation:hzK50 10s cubic-bezier(.16,1,.3,1) infinite"><span style="width:6.4cqw;height:6.4cqw;border-radius:999px;background:#000;display:grid;place-items:center;animation:hzRing 1.4s ease-out infinite"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg></span>Confirming medication…</div>
+<div style="position:absolute;right:5cqw;bottom:5cqw;display:flex;flex-direction:column;align-items:flex-end;gap:1.6cqw;padding:2.6cqw 3.4cqw;border-radius:3cqw;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.6);animation:hzK65 10s cubic-bezier(.16,1,.3,1) infinite"><span style="font-family:'Geist Mono',monospace;font-size:2.4cqw;letter-spacing:.2em;color:rgba(255,255,255,.85)">OUTCOME LOGGED</span><span style="display:flex;gap:1cqw"><i style="width:3cqw;height:1.2cqw;background:#fff;border-radius:1cqw"></i><i style="width:3cqw;height:1.2cqw;background:#fff;border-radius:1cqw"></i><i style="width:3cqw;height:1.2cqw;background:#fff;border-radius:1cqw"></i><i style="width:3cqw;height:1.2cqw;background:rgba(255,255,255,.3);border-radius:1cqw"></i></span></div>
+<div data-hoverpanel="1" style="position:absolute;left:10px;right:10px;bottom:10px;padding:20px 22px;border-radius:18px;background:rgba(10,10,10,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.1);display:flex;flex-direction:column;gap:7px;font-size:14px;color:rgba(255,255,255,.88);transform:translateY(110%);opacity:0;transition:transform .6s cubic-bezier(.16,1,.3,1), opacity .4s ease">
+<span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5);padding-bottom:4px">INSIDE CALL-E</span>
+<span>Prescription upload · Local OCR · Staff review</span><span>Persistent records · Medication confirmation calls</span><span>Reminder workflows · Call-readiness controls</span><span>Outcome reconciliation</span>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px 12px 18px;border-radius:22px;background:rgba(255,255,255,.04);box-shadow:inset 0 1px 1px rgba(255,255,255,.12), inset 0 0 0 1px rgba(255,255,255,.08)">
+<div style="display:flex;flex-direction:column;gap:4px"><span data-decrypt="1" style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55)">AI · HEALTHCARE WORKFLOW</span><b style="font-size:20px;font-weight:500">CALL-E</b></div>
+<a href="Technology.dc.html#call-e" aria-label="Explore CALL-E" style="flex:none;width:48px;height:48px;border-radius:999px;background:hsl(272 85% 62%);display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+<p style="margin:0 8px;font-size:12px;line-height:1.5;color:rgba(255,255,255,.55)">Technology prototype. Not clinically validated or medically approved.</p>
+</article>
+
+<article data-in=".1" style="display:flex;flex-direction:column;gap:14px">
+<div data-tilt="6" data-hovercard="1" style="position:relative;padding:18px;border-radius:32px;background:rgba(255,255,255,.03);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.09);display:flex;flex-direction:column;gap:14px;transition:transform .5s ease-out">
+<div role="img" aria-label="AI Website Builder: a prompt is typed, then the app is generated, built, browser-checked, self-repaired and deployed" style="position:relative;aspect-ratio:1;border-radius:24px;overflow:hidden;background-color:#070707;background-image:linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);background-size:28px 28px;container-type:inline-size">
+<div style="position:absolute;left:6cqw;right:6cqw;top:7cqw;display:flex;align-items:center;gap:2.4cqw;padding:2.2cqw 2.2cqw 2.2cqw 4cqw;border-radius:999px;background:rgba(255,255,255,.06);box-shadow:inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.12)">
+<span style="font-family:'Geist Mono',monospace;font-size:3.2cqw;color:rgba(255,255,255,.45)">›</span>
+<span style="flex:1;min-width:0;font-size:3.6cqw;white-space:nowrap;overflow:hidden"><span data-type="A booking site for my café|A CRM for my real-estate team|A store with Stripe checkout"></span><span aria-hidden="true" style="display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-.15em;background:#fff;animation:hzBlink 1s steps(1) infinite"></span></span>
+<span style="width:8cqw;height:8cqw;border-radius:999px;background:#fff;display:grid;place-items:center;flex:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></span>
+</div>
+<div style="position:absolute;left:6cqw;top:28cqw;display:flex;flex-direction:column;gap:3.4cqw;font-family:'Geist Mono',monospace;font-size:2.6cqw;letter-spacing:.14em;color:rgba(255,255,255,.62)">
+<span style="animation:hzK20 10s linear infinite">GENERATE</span>
+<span style="animation:hzK35 10s linear infinite">BUILD ✓</span>
+<span style="animation:hzK50 10s linear infinite">BROWSER CHECK ✓</span>
+<span style="animation:hzK65 10s linear infinite">SELF-REPAIR ✓</span>
+<span style="color:#fff;animation:hzK80 10s linear infinite">DEPLOYED ●</span>
+</div>
+<div style="position:absolute;right:6cqw;top:26cqw;width:50cqw;height:66cqw;border-radius:3cqw;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.5);padding:3cqw;display:flex;flex-direction:column;gap:3cqw">
+<div style="display:flex;justify-content:space-between;align-items:center;animation:hzK35 10s linear infinite"><i style="display:block;width:9cqw;height:1.6cqw;border-radius:1cqw;background:rgba(255,255,255,.6)"></i><span style="display:flex;gap:1.3cqw"><i style="display:block;width:4cqw;height:1cqw;border-radius:1cqw;background:rgba(255,255,255,.3)"></i><i style="display:block;width:4cqw;height:1cqw;border-radius:1cqw;background:rgba(255,255,255,.3)"></i><i style="display:block;width:4cqw;height:1cqw;border-radius:1cqw;background:rgba(255,255,255,.3)"></i></span></div>
+<div style="display:flex;flex-direction:column;gap:1.8cqw;padding:4cqw 0;animation:hzK50 10s linear infinite"><i style="display:block;width:30cqw;height:2.2cqw;border-radius:1cqw;background:rgba(255,255,255,.75)"></i><i style="display:block;width:20cqw;height:1.4cqw;border-radius:1cqw;background:rgba(255,255,255,.3)"></i><i style="display:block;width:12cqw;height:4cqw;border-radius:2cqw;background:#fff;margin-top:1cqw"></i></div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw;animation:hzK65 10s linear infinite"><span style="aspect-ratio:1;border-radius:1.6cqw;background:rgba(255,255,255,.1)"></span><span style="aspect-ratio:1;border-radius:1.6cqw;background:rgba(255,255,255,.1)"></span><span style="aspect-ratio:1;border-radius:1.6cqw;background:rgba(255,255,255,.1)"></span></div>
+<div style="flex:1;border-radius:1.6cqw;background:rgba(255,255,255,.06);animation:hzK80 10s linear infinite"></div>
+</div>
+<div data-hoverpanel="1" style="position:absolute;left:10px;right:10px;bottom:10px;padding:20px 22px;border-radius:18px;background:rgba(10,10,10,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.1);display:flex;flex-direction:column;gap:7px;font-size:14px;color:rgba(255,255,255,.88);transform:translateY(110%);opacity:0;transition:transform .6s cubic-bezier(.16,1,.3,1), opacity .4s ease">
+<span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5);padding-bottom:4px">INSIDE THE BUILDER</span>
+<span>Natural-language app generation</span><span>React · Supabase · Auth · Stripe · Vercel deploy</span><span>Build &amp; browser verification</span><span>Iterative editing · Self-repair workflows</span>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px 12px 18px;border-radius:22px;background:rgba(255,255,255,.04);box-shadow:inset 0 1px 1px rgba(255,255,255,.12), inset 0 0 0 1px rgba(255,255,255,.08)">
+<div style="display:flex;flex-direction:column;gap:4px"><span data-decrypt="1" style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55)">AI · FULL-STACK</span><b style="font-size:20px;font-weight:500">AI Website Builder</b></div>
+<a href="Technology.dc.html#builder" aria-label="Explore the AI Website Builder" style="flex:none;width:48px;height:48px;border-radius:999px;background:hsl(272 85% 62%);display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+<p style="margin:0 8px;font-size:16px;color:rgba(255,255,255,.82)">From an idea to a <em style="font-family:'Instrument Serif',serif;font-style:italic;font-size:19px">working application.</em></p>
+</article>
+
+<article data-in=".2" style="display:flex;flex-direction:column;gap:14px">
+<div data-tilt="6" style="position:relative;padding:18px;border-radius:32px;background:rgba(255,255,255,.03);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.09);display:flex;flex-direction:column;gap:14px;transition:transform .5s ease-out">
+<div style="position:relative;aspect-ratio:1;border-radius:24px;overflow:hidden;background:#070707;container-type:inline-size">
+<div style="position:absolute;inset:9cqw;border-radius:4cqw;border:1.5px dashed rgba(255,255,255,.25);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4cqw">
+<i style="display:block;width:30cqw;height:1.4cqw;border-radius:1cqw;background:rgba(255,255,255,.1)"></i>
+<i style="display:block;width:20cqw;height:1.4cqw;border-radius:1cqw;background:rgba(255,255,255,.07)"></i>
+<span style="margin-top:4cqw;font-size:6cqw;font-weight:500;letter-spacing:-0.02em">Your idea<span aria-hidden="true" style="display:inline-block;width:.08em;height:1em;margin-left:.08em;vertical-align:-.12em;background:#fff;animation:hzBlink 1s steps(1) infinite"></span></span>
+</div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px 12px 18px;border-radius:22px;background:rgba(255,255,255,.04);box-shadow:inset 0 1px 1px rgba(255,255,255,.12), inset 0 0 0 1px rgba(255,255,255,.08)">
+<div style="display:flex;flex-direction:column;gap:4px"><span data-decrypt="1" style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55)">CUSTOM BUILD</span><b style="font-size:20px;font-weight:500">Your build, next</b></div>
+<a href="Contact.dc.html?intent=build" aria-label="Start a build conversation" style="flex:none;width:48px;height:48px;border-radius:999px;background:hsl(272 85% 62%);display:grid;place-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</div>
+<p style="margin:0 8px;font-size:16px;color:rgba(255,255,255,.82)">If the right tool doesn't exist, we can build it.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="founders-h" data-screen-label="Founders" style="position:relative;overflow:hidden;padding:clamp(120px,14vw,190px) 0;background:#000">
+<div aria-hidden="true" style="position:absolute;inset:-6%;background:url('assets/team/allan.jpg') 50% 20%/cover no-repeat;filter:blur(38px) grayscale(1) brightness(.5);transform:scale(1.1)"></div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:hsl(272 85% 62%);mix-blend-mode:color;opacity:.28"></div>
+<div data-rays="1" aria-hidden="true" style="position:absolute;inset:0;transition:transform 1.2s ease-out;pointer-events:none;mix-blend-mode:screen">
+<div style="position:absolute;left:62%;top:-8%;width:0;height:0">
+<div style="position:absolute;left:-70vw;top:0;width:140vw;height:130vh;transform-origin:50% 0;animation:hzSway 14s ease-in-out infinite;background:conic-gradient(from 180deg at 50% 0%, transparent 164deg, rgba(255,255,255,.10) 173deg, rgba(255,255,255,.18) 180deg, rgba(255,255,255,.10) 187deg, transparent 196deg);filter:blur(22px)"></div>
+<div style="position:absolute;left:-70vw;top:0;width:140vw;height:120vh;transform-origin:50% 0;animation:hzSway 11s ease-in-out -3s infinite reverse;background:conic-gradient(from 180deg at 50% 0%, transparent 172deg, rgba(255,255,255,.12) 178deg, transparent 184deg);filter:blur(8px)"></div>
+</div>
+</div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(80% 70% at 70% 45%, transparent 0%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.92) 100%),linear-gradient(#000 0%, transparent 16%, transparent 84%, #000 100%)"></div>
+<div style="position:relative;max-width:1920px;margin:0 auto;padding:0 clamp(20px,3vw,44px);display:flex;flex-wrap:wrap;gap:clamp(48px,6vw,110px);align-items:center">
+<div style="flex:1 1 440px;min-width:0;max-width:680px;display:flex;flex-direction:column;gap:28px">
+<span data-in="0" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)">The founders</span>
+<h2 id="founders-h" data-split="1" style="margin:0;font-size:clamp(2.75rem,6.4vw,6.25rem);font-weight:500;letter-spacing:-0.05em;line-height:.94">
+<span style="display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em"><span data-lni="1" style="display:block">From the stage</span></span>
+<span style="display:block;overflow:hidden;padding-bottom:.14em;margin-bottom:-.14em"><span data-lni="1" style="display:block">to the <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">boardroom.</em></span></span>
+</h2>
+<p data-in=".1" style="margin:0;font-size:clamp(1.15rem,1.6vw,1.45rem);line-height:1.5;color:#E4EAF0;text-wrap:pretty">Nirmal and Allan met on a Bangalore stage — a band one singer short, and a violinist who knew exactly who to call.</p>
+<p data-in=".2" style="margin:0;font-size:clamp(1rem,1.2vw,1.12rem);line-height:1.65;color:rgba(228,234,240,.72);text-wrap:pretty">Years of gigs taught them what most agencies miss: every performance is a pitch. Read the room. Communicate value. Earn the next booking. Hozeh is that instinct — applied to growing businesses.</p>
+<blockquote data-in=".3" style="margin:8px 0 0;padding:0 0 0 22px;border-left:1px solid rgba(255,255,255,.3);font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:clamp(1.4rem,2vw,1.9rem);line-height:1.25;color:#fff">“Music taught us how to sell. Engineering taught us how to build.”</blockquote>
+<a href="About.dc.html" data-in=".4" style="align-self:flex-start;margin-top:8px;display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;border:2px solid rgba(255,255,255,.8);color:#fff;font-weight:500;transition:background .3s ease, color .3s ease" style-hover="background:#fff;color:#000">Our story <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+<div data-in=".2" style="flex:1 1 520px;min-width:0;display:flex;flex-wrap:wrap;gap:clamp(16px,2vw,28px);justify-content:center;perspective:1400px">
+<figure data-tilt="6" style="margin:0;flex:1 1 260px;min-width:0;max-width:340px;display:flex;flex-direction:column;gap:18px;transition:transform .5s ease-out">
+<div style="position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:#0a0a0a;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12), 0 50px 90px -50px hsl(272 85% 62% / .55)">
+<img src="assets/team/nirmal.jpg" alt="Nirmal" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 22%;filter:grayscale(1) contrast(1.06);transition:filter .7s ease, transform .9s cubic-bezier(.16,1,.3,1)" style-hover="filter:grayscale(0);transform:scale(1.04)">
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(0,0,0,.75), transparent 45%)"></div>
+<span style="position:absolute;left:16px;top:16px;padding:7px 12px;border-radius:999px;background:rgba(0,0,0,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.85)">BAND LEAD</span>
+<div style="position:absolute;left:20px;right:20px;bottom:18px;display:flex;flex-direction:column;gap:6px"><b style="font-weight:500;font-size:22px;letter-spacing:-0.02em">Nirmal</b><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7)">Co-Founder · Technology & AI</span></div>
+</div>
+<figcaption style="padding:0 4px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.72)">Engineer by training in AI &amp; Data Science. Builds the software, AI and systems behind the growth.</figcaption>
+</figure>
+<figure data-tilt="6" style="margin:0;flex:1 1 260px;min-width:0;max-width:340px;display:flex;flex-direction:column;gap:18px;transition:transform .5s ease-out">
+<div style="position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:#0a0a0a;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12), 0 50px 90px -50px hsl(272 85% 62% / .55)">
+<img src="assets/team/allan.jpg" alt="Allan Gabriel" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:47% 28%;filter:grayscale(1) contrast(1.06);transition:filter .7s ease, transform .9s cubic-bezier(.16,1,.3,1)" style-hover="filter:grayscale(0);transform:scale(1.04)">
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(0,0,0,.75), transparent 45%)"></div>
+<span style="position:absolute;left:16px;top:16px;padding:7px 12px;border-radius:999px;background:rgba(0,0,0,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.85)">VOCALS</span>
+<div style="position:absolute;left:20px;right:20px;bottom:18px;display:flex;flex-direction:column;gap:6px"><b style="font-weight:500;font-size:22px;letter-spacing:-0.02em">Allan Gabriel</b><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7)">Co-Founder · Marketing & Growth</span></div>
+</div>
+<figcaption style="padding:0 4px;font-size:15px;line-height:1.55;color:rgba(255,255,255,.72)">A frontman by instinct. Leads brand, growth and the conversations that turn into business.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="diff-h" data-screen-label="Different by design" style="position:relative;padding:clamp(100px,12vw,160px) 0;border-top:1px solid rgba(255,255,255,.08)">
+<div style="max-width:1920px;margin:0 auto;padding:0 clamp(20px,3vw,44px)">
+<span data-in="0" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55)">Why Hozeh</span>
+<h2 id="diff-h" data-split="1" style="margin:22px 0 0;font-size:clamp(2.5rem,6vw,5.75rem);font-weight:500;letter-spacing:-0.045em;line-height:.95"><span style="display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em"><span data-lni="1" style="display:block">Different by <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">design.</em></span></span></h2>
+<div style="margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px">
+<article data-spot="1" data-tilt="5" style="position:relative;overflow:hidden;padding:10px 10px 26px;border-radius:26px;background:#050505;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:22px;transition:border-color .4s ease, transform .5s ease-out" style-hover="border-color:rgba(255,255,255,.26)">
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--mx,-500px) var(--my,-500px), rgba(155,77,255,.2), transparent 60%)"></div>
+<div style="position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#07050b;background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);background-size:18px 18px">
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 45%, hsl(272 85% 62% / .22), transparent 70%)"></div>
+<div data-tilt-inner="1" style="position:absolute;inset:0;display:grid;place-items:center;transition:transform .6s ease-out"><svg viewBox="0 0 200 150" aria-hidden="true" style="width:78%;height:auto;overflow:visible;filter:drop-shadow(0 0 10px hsl(272 85% 62% / .55))"><g transform="translate(100 72)">
+<circle r="52" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1"></circle>
+<circle r="52" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="40 286" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"></animateTransform></circle>
+<circle r="34" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-dasharray="3 5"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite"></animateTransform></circle>
+<circle r="16" fill="none" stroke="hsl(272 85% 62%)" stroke-width="2"><animate attributeName="r" values="12;20;12" dur="2.4s" repeatCount="indefinite"></animate><animate attributeName="opacity" values="1;.3;1" dur="2.4s" repeatCount="indefinite"></animate></circle>
+<circle r="4" fill="#fff"></circle>
+<path d="M-66 0H-40M40 0H66M0 -66V-40M0 40V66" stroke="rgba(255,255,255,.55)" stroke-width="1.2"></path>
+</g></svg></div>
+<span style="position:absolute;left:14px;bottom:8px;font-family:'Anton',sans-serif;font-size:clamp(2.6rem,3.6vw,3.5rem);line-height:.9;color:#fff">01</span>
+<span style="position:absolute;right:12px;top:12px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.45);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.85)">BUSINESS FIRST</span>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:10px;padding:0 14px">
+<h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-0.02em;line-height:1.15">We start with the business.</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.66)">We don't begin by asking what to post. We ask what the business actually needs.</p>
+</div>
+</article>
+<article data-spot="1" data-tilt="5" style="position:relative;overflow:hidden;padding:10px 10px 26px;border-radius:26px;background:#050505;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:22px;transition:border-color .4s ease, transform .5s ease-out" style-hover="border-color:rgba(255,255,255,.26)">
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--mx,-500px) var(--my,-500px), rgba(155,77,255,.2), transparent 60%)"></div>
+<div style="position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#07050b;background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);background-size:18px 18px">
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 45%, hsl(272 85% 62% / .22), transparent 70%)"></div>
+<div data-tilt-inner="1" style="position:absolute;inset:0;display:grid;place-items:center;transition:transform .6s ease-out"><svg viewBox="0 0 200 150" aria-hidden="true" style="width:78%;height:auto;overflow:visible;filter:drop-shadow(0 0 10px hsl(272 85% 62% / .55))"><g transform="translate(100 80)">
+<rect x="-22" y="-38" width="44" height="72" rx="8" fill="#0d0a14" stroke="rgba(255,255,255,.35)"><animateTransform attributeName="transform" type="rotate" values="0;-22;-22;0" keyTimes="0;.3;.8;1" dur="5s" repeatCount="indefinite"></animateTransform></rect>
+<rect x="-22" y="-38" width="44" height="72" rx="8" fill="#0d0a14" stroke="rgba(255,255,255,.35)"><animateTransform attributeName="transform" type="rotate" values="0;22;22;0" keyTimes="0;.3;.8;1" dur="5s" repeatCount="indefinite"></animateTransform></rect>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -18;0 -18;0 0" keyTimes="0;.3;.45;.8;1" dur="5s" repeatCount="indefinite"></animateTransform>
+<rect x="-22" y="-38" width="44" height="72" rx="8" fill="#140d20" stroke="#fff" stroke-width="1.5"></rect>
+<path d="M-6 -12L10 -2L-6 8Z" fill="#fff"></path>
+<path d="M-12 20H12" stroke="rgba(255,255,255,.4)" stroke-width="3" stroke-linecap="round"></path>
+</g>
+<path d="M44 -30C60 -44 72 -44 82 -56" fill="none" stroke="hsl(272 85% 62%)" stroke-width="2" stroke-dasharray="4 5"><animate attributeName="stroke-dashoffset" from="18" to="0" dur="1s" repeatCount="indefinite"></animate></path>
+<path d="M76 -58L84 -57L82 -49" fill="none" stroke="hsl(272 85% 62%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</g></svg></div>
+<span style="position:absolute;left:14px;bottom:8px;font-family:'Anton',sans-serif;font-size:clamp(2.6rem,3.6vw,3.5rem);line-height:.9;color:#fff">02</span>
+<span style="position:absolute;right:12px;top:12px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.45);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.85)">BEYOND CONTENT</span>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:10px;padding:0 14px">
+<h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-0.02em;line-height:1.15">We think beyond content.</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.66)">Content is one part of marketing. Growth is the bigger picture.</p>
+</div>
+</article>
+<article data-spot="1" data-tilt="5" style="position:relative;overflow:hidden;padding:10px 10px 26px;border-radius:26px;background:#050505;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:22px;transition:border-color .4s ease, transform .5s ease-out" style-hover="border-color:rgba(255,255,255,.26)">
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--mx,-500px) var(--my,-500px), rgba(155,77,255,.2), transparent 60%)"></div>
+<div style="position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#07050b;background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);background-size:18px 18px">
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 45%, hsl(272 85% 62% / .22), transparent 70%)"></div>
+<div data-tilt-inner="1" style="position:absolute;inset:0;display:grid;place-items:center;transition:transform .6s ease-out"><svg viewBox="0 0 200 150" aria-hidden="true" style="width:78%;height:auto;overflow:visible;filter:drop-shadow(0 0 10px hsl(272 85% 62% / .55))"><g transform="translate(40 128)">
+<path d="M0 0H130" stroke="rgba(255,255,255,.3)"></path>
+<rect x="6" width="18" rx="3" fill="rgba(255,255,255,.35)" y="-30" height="30"><animate attributeName="height" values="8;30;30;8" keyTimes="0;.3;.85;1" dur="4s" repeatCount="indefinite"></animate><animate attributeName="y" values="-8;-30;-30;-8" keyTimes="0;.3;.85;1" dur="4s" repeatCount="indefinite"></animate></rect>
+<rect x="36" width="18" rx="3" fill="rgba(255,255,255,.5)" y="-52" height="52"><animate attributeName="height" values="8;52;52;8" keyTimes="0;.4;.85;1" dur="4s" repeatCount="indefinite"></animate><animate attributeName="y" values="-8;-52;-52;-8" keyTimes="0;.4;.85;1" dur="4s" repeatCount="indefinite"></animate></rect>
+<rect x="66" width="18" rx="3" fill="rgba(255,255,255,.7)" y="-72" height="72"><animate attributeName="height" values="8;72;72;8" keyTimes="0;.5;.85;1" dur="4s" repeatCount="indefinite"></animate><animate attributeName="y" values="-8;-72;-72;-8" keyTimes="0;.5;.85;1" dur="4s" repeatCount="indefinite"></animate></rect>
+<rect x="96" width="18" rx="3" fill="#fff" y="-98" height="98"><animate attributeName="height" values="8;98;98;8" keyTimes="0;.6;.85;1" dur="4s" repeatCount="indefinite"></animate><animate attributeName="y" values="-8;-98;-98;-8" keyTimes="0;.6;.85;1" dur="4s" repeatCount="indefinite"></animate></rect>
+<path d="M4 -40L44 -64L74 -84L118 -112" fill="none" stroke="hsl(272 85% 62%)" stroke-width="2.5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;.2;.65;.85;1" dur="4s" repeatCount="indefinite"></animate></path>
+<circle cx="118" cy="-112" r="4" fill="hsl(272 85% 62%)"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.6;.65;.85;1" dur="4s" repeatCount="indefinite"></animate></circle>
+</g></svg></div>
+<span style="position:absolute;left:14px;bottom:8px;font-family:'Anton',sans-serif;font-size:clamp(2.6rem,3.6vw,3.5rem);line-height:.9;color:#fff">03</span>
+<span style="position:absolute;right:12px;top:12px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.45);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.85)">SALES INSTINCT</span>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:10px;padding:0 14px">
+<h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-0.02em;line-height:1.15">We know how to sell.</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.66)">Understanding value, communicating it clearly, creating opportunities.</p>
+</div>
+</article>
+<article data-spot="1" data-tilt="5" style="position:relative;overflow:hidden;padding:10px 10px 26px;border-radius:26px;background:#050505;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:22px;transition:border-color .4s ease, transform .5s ease-out" style-hover="border-color:rgba(255,255,255,.26)">
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--mx,-500px) var(--my,-500px), rgba(155,77,255,.2), transparent 60%)"></div>
+<div style="position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#07050b;background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);background-size:18px 18px">
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 45%, hsl(272 85% 62% / .22), transparent 70%)"></div>
+<div data-tilt-inner="1" style="position:absolute;inset:0;display:grid;place-items:center;transition:transform .6s ease-out"><svg viewBox="0 0 200 150" aria-hidden="true" style="width:78%;height:auto;overflow:visible;filter:drop-shadow(0 0 10px hsl(272 85% 62% / .55))"><g transform="translate(100 74)" font-family="Geist Mono, monospace">
+<path d="M-54 -34L-80 0L-54 34" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M54 -34L80 0L54 34" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+<g>
+<rect x="-34" y="-26" width="30" height="22" rx="4" fill="rgba(255,255,255,.2)" stroke="rgba(255,255,255,.5)"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4s" repeatCount="indefinite"></animate></rect>
+<rect x="4" y="-26" width="30" height="22" rx="4" fill="rgba(255,255,255,.2)" stroke="rgba(255,255,255,.5)"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.2;.35;.85;1" dur="4s" repeatCount="indefinite"></animate></rect>
+<rect x="-34" y="4" width="68" height="22" rx="4" fill="hsl(272 85% 62%)" fill-opacity=".45" stroke="hsl(272 85% 62%)"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.4;.55;.85;1" dur="4s" repeatCount="indefinite"></animate></rect>
+</g>
+<rect x="40" y="-6" width="3" height="14" fill="#fff"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"></animate></rect>
+</g></svg></div>
+<span style="position:absolute;left:14px;bottom:8px;font-family:'Anton',sans-serif;font-size:clamp(2.6rem,3.6vw,3.5rem);line-height:.9;color:#fff">04</span>
+<span style="position:absolute;right:12px;top:12px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.45);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.85)">WE BUILD</span>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:10px;padding:0 14px">
+<h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-0.02em;line-height:1.15">We build what we need.</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.66)">When the right solution doesn't exist, we build it.</p>
+</div>
+</article>
+<article data-spot="1" data-tilt="5" style="position:relative;overflow:hidden;padding:10px 10px 26px;border-radius:26px;background:#050505;border:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:22px;transition:border-color .4s ease, transform .5s ease-out" style-hover="border-color:rgba(255,255,255,.26)">
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--mx,-500px) var(--my,-500px), rgba(155,77,255,.2), transparent 60%)"></div>
+<div style="position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#07050b;background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);background-size:18px 18px">
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 45%, hsl(272 85% 62% / .22), transparent 70%)"></div>
+<div data-tilt-inner="1" style="position:absolute;inset:0;display:grid;place-items:center;transition:transform .6s ease-out"><svg viewBox="0 0 200 150" aria-hidden="true" style="width:78%;height:auto;overflow:visible;filter:drop-shadow(0 0 10px hsl(272 85% 62% / .55))"><g>
+<circle cx="24" cy="110" r="6" fill="#fff"></circle>
+<circle cx="176" cy="40" r="7" fill="none" stroke="#fff" stroke-width="2"></circle><circle cx="176" cy="40" r="2.5" fill="#fff"></circle>
+<rect x="84" y="56" width="32" height="32" rx="4" fill="none" stroke="rgba(255,255,255,.35)" stroke-dasharray="3 3"></rect>
+<path d="M92 64L108 80M108 64L92 80" stroke="rgba(255,255,255,.45)" stroke-width="1.5"></path>
+<path d="M24 110C60 110 70 72 100 72C130 72 140 40 176 40" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-dasharray="4 5"><animate attributeName="opacity" values="1;1;.15;.15;1" keyTimes="0;.35;.45;.9;1" dur="5s" repeatCount="indefinite"></animate></path>
+<path d="M24 110C54 110 58 118 100 118C150 118 150 60 176 40" fill="none" stroke="hsl(272 85% 62%)" stroke-width="2.5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;.4;.75;.92;1" dur="5s" repeatCount="indefinite"></animate></path>
+<circle r="4" fill="#fff"><animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;.4;.75;1" calcMode="linear" path="M24 110C54 110 58 118 100 118C150 118 150 60 176 40"></animateMotion><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.39;.4;.92;1" dur="5s" repeatCount="indefinite"></animate></circle>
+</g></svg></div>
+<span style="position:absolute;left:14px;bottom:8px;font-family:'Anton',sans-serif;font-size:clamp(2.6rem,3.6vw,3.5rem);line-height:.9;color:#fff">05</span>
+<span style="position:absolute;right:12px;top:12px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.45);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.85)">ADAPTIVE</span>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:10px;padding:0 14px">
+<h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-0.02em;line-height:1.15">We adapt.</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.66)">A strategy isn't sacred. If the evidence says change, we change.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section data-zoom="1" data-life="1" aria-labelledby="forest-h" data-screen-label="Based in India" style="position:relative;min-height:90vh;overflow:hidden;display:flex;align-items:center">
+<div data-zoom-media="1" style="position:absolute;inset:0;will-change:transform">
+<dc-import name="BgVideo" src="assets/video/hf_20260803_192301_9231ed6b-c55c-4a48-909c-4ebe11cf2e11.mp4" treatment="duotone" tint="{{ 0.18 }}" hint-size="100%,100%" style="position:absolute;inset:0"></dc-import>
+</div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.55) 38%, transparent 70%),linear-gradient(#000, transparent 20%, transparent 80%, #000)"></div>
+<div style="position:relative;width:100%;max-width:1920px;margin:0 auto;padding:clamp(100px,12vw,160px) clamp(20px,3vw,44px)">
+<em aria-hidden="true" style="display:block;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(2rem,3.2vw,2.9rem);color:rgba(255,255,255,.92);margin-bottom:16px">anywhere</em>
+<h2 id="forest-h" data-in="0" style="margin:0;display:flex;flex-direction:column;font-size:clamp(1.9rem,4.4vw,4rem);font-weight:600;letter-spacing:-0.02em;line-height:1.02;text-transform:uppercase">
+<span>Based in India.</span>
+<span style="margin-bottom:.9em">Built for anywhere.</span>
+<span style="color:rgba(255,255,255,.62)">Understand the business.</span>
+<span style="color:rgba(255,255,255,.62)">Find the opportunity.</span>
+<span style="color:rgba(255,255,255,.62)">Build the solution.</span>
+</h2>
+<div style="margin-top:clamp(40px,6vw,72px);display:flex;flex-direction:column;gap:10px">
+<a href="https://www.instagram.com/" aria-label="Hozeh on Instagram" rel="noopener" style="width:46px;height:46px;border-radius:999px;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.12)" style-hover="background:rgba(255,255,255,.14)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"></circle></svg></a>
+<a href="https://www.linkedin.com/" aria-label="Hozeh on LinkedIn" rel="noopener" style="width:46px;height:46px;border-radius:999px;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.12)" style-hover="background:rgba(255,255,255,.14)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7"></path><path d="M8 7v.01"></path><path d="M12 17v-4a2 2 0 0 1 4 0v4"></path><path d="M12 10v7"></path></svg></a>
+<a href="https://github.com/" aria-label="Hozeh on GitHub" rel="noopener" style="width:46px;height:46px;border-radius:999px;display:grid;place-items:center;color:#fff;background:rgba(255,255,255,.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.12)" style-hover="background:rgba(255,255,255,.14)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5"></path><path d="M15 21v-3.5a3 3 0 0 0-.9-2.3c3-.3 6-1.5 6-6.5a5 5 0 0 0-1.4-3.5 4.6 4.6 0 0 0-.1-3.5s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.5 0C6 1.4 4.9 1.7 4.9 1.7a4.6 4.6 0 0 0-.1 3.5A5 5 0 0 0 3.4 8.7c0 5 3 6.2 6 6.5a3 3 0 0 0-.9 2.3V21"></path></svg></a>
+</div>
+</div>
+</section>
+
+<dc-import name="FinalCta" hint-size="100%,100svh"></dc-import>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,640px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const doc = document, W = window;
+    const q = (s, r) => Array.from((r || doc).querySelectorAll(s));
+    const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+    const reduce = (W.HZ_HONOR_REDUCED_MOTION===true&&W.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    const fine = W.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    const offs = []; this._offs = offs;
+    const on = (t, e, f, o) => { t.addEventListener(e, f, o); offs.push(() => t.removeEventListener(e, f, o)); };
+    const fx = []; let ticking = false;
+    const run = () => { ticking = false; fx.forEach(f => f()); };
+    const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(run); } };
+    on(W, 'scroll', req, { passive: true }); on(W, 'resize', req);
+
+    // Preloader — first visit per session
+    const pl = doc.querySelector('[data-preloader]');
+    if (pl) {
+      let seen = false;
+      try { seen = sessionStorage.getItem('hz-seen') === '1'; sessionStorage.setItem('hz-seen', '1'); } catch (e) {}
+      if (!seen && !reduce) {
+        pl.style.display = 'flex';
+        const de = doc.documentElement, prevOv = de.style.overflow; de.style.overflow = 'hidden';
+        const cnt = pl.querySelector('[data-pl-count]'), t0 = performance.now(); let done = false;
+        const fin = () => { if (done) return; done = true; de.style.overflow = prevOv; pl.style.clipPath = 'inset(0 0 100% 0)'; setTimeout(() => { pl.style.display = 'none'; }, 1000); };
+        offs.push(() => { de.style.overflow = prevOv; });
+        const tick = t => { if (done) return; const p = clamp((t - t0) / 1300, 0, 1); cnt.textContent = String(Math.round(p * 100)).padStart(2, '0'); if (p < 1) requestAnimationFrame(tick); else setTimeout(fin, 150); };
+        requestAnimationFrame(tick); pl.addEventListener('click', fin);
+      }
+    }
+
+    // Reveal on view + split headings
+    if (!reduce && 'IntersectionObserver' in W) {
+      const ins = q('[data-in]'), splits = q('[data-split]');
+      ins.forEach(e => { e.style.opacity = '0'; e.style.transform = e.dataset.inx ? `translateX(${e.dataset.inx}px)` : 'translateY(24px)'; });
+      splits.forEach(h => q('[data-lni]', h).forEach(l => { l.style.transform = 'translateY(105%)'; }));
+      void doc.body.offsetHeight;
+      const io = new IntersectionObserver(es => es.forEach(en => {
+        if (!en.isIntersecting) return; const t = en.target; io.unobserve(t);
+        if (t.hasAttribute('data-split')) q('[data-lni]', t).forEach((l, i) => { l.style.transition = `transform .9s cubic-bezier(.16,1,.3,1) ${0.1 + i * 0.08}s`; l.style.transform = 'none'; });
+        else { const d = parseFloat(t.dataset.in) || 0; t.style.transition = `opacity .7s ease-out ${d}s, transform .9s cubic-bezier(.16,1,.3,1) ${d}s`; t.style.opacity = t.style.opacity === '0' && t.tagName === 'svg' ? '.35' : '1'; t.style.transform = 'none'; }
+      }), { rootMargin: '0px 0px -80px 0px' });
+      ins.forEach(e => io.observe(e)); splits.forEach(e => io.observe(e)); offs.push(() => io.disconnect());
+    }
+
+    // Hero: screen recedes into 3D space
+    const hero = doc.querySelector('[data-hero]'), scr = doc.querySelector('[data-hero-screen]'), hc = doc.querySelector('[data-hero-content]');
+    if (hero && scr && !reduce) fx.push(() => {
+      const r = hero.getBoundingClientRect(), span = Math.max(1, r.height - innerHeight), p = clamp(-r.top / span, 0, 1);
+      const e = 1 - Math.pow(1 - p, 2);
+      scr.style.transform = `translateY(${e * 3}%) rotateX(${e * 16}deg) scale(${1 - e * 0.18})`;
+      scr.style.borderRadius = `${e * 44}px`;
+      if (hc) { hc.style.opacity = String(clamp(1 - p * 1.7, 0, 1)); hc.style.transform = `translateY(${-p * 70}px)`; }
+    });
+
+    // Only re-fit when the width changes, so the mobile URL bar showing/hiding doesn't make hero text pop in and out while scrolling
+    let fitW = -1;
+    const shortFit = () => {
+      if (innerWidth === fitW) return; fitW = innerWidth;
+      const h = Math.max(innerHeight, doc.documentElement.clientHeight), s = h < 640 && innerWidth >= 700;
+      q('[data-hero-lead]').forEach(e => e.style.display = s ? 'none' : '');
+      q('[data-hero-cards]').forEach(e => e.style.display = (h < 760 || innerWidth < 1100) ? 'none' : '');
+    };
+    shortFit(); on(W, 'resize', shortFit);
+
+    // Mouse parallax / depth
+    if (fine && !reduce) {
+      const ds = q('[data-depth]'); let mx = 0, my = 0, raf = 0;
+      on(W, 'mousemove', e => {
+        mx = e.clientX / innerWidth - 0.5; my = e.clientY / innerHeight - 0.5;
+        if (!raf) raf = requestAnimationFrame(() => { raf = 0; ds.forEach(d => { const k = parseFloat(d.dataset.depth) || 10; d.style.transform = `translate3d(${-mx * k}px,${-my * k}px,0) rotateY(${mx * k * 0.3}deg) rotateX(${-my * k * 0.3}deg)`; }); });
+      }, { passive: true });
+      const rays = doc.querySelector('[data-rays]');
+      if (rays) on(W, 'mousemove', e => { rays.style.transform = `translateX(${(e.clientX / innerWidth - 0.5) * 5}%)`; }, { passive: true });
+    }
+
+    // RotatingText
+    q('[data-rot]').forEach(el => {
+      const words = el.dataset.rot.split('|'); let i = 0;
+      const ph = el.parentNode.querySelector('[data-rot-ph]'); if (ph) ph.style.display = 'none';
+      const html = (w, y, op) => w.split('').map((c, ci) => `<span style="display:inline-block;transform:translateY(${y});opacity:${op};transition:transform .5s cubic-bezier(.16,1,.3,1) ${ci * 0.02}s, opacity .4s ease ${ci * 0.02}s">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+      el.innerHTML = html(words[0], '0', 1);
+      if (reduce) return;
+      const id = setInterval(() => {
+        q('span', el).forEach(s => { s.style.transform = 'translateY(-110%)'; s.style.opacity = '0'; });
+        setTimeout(() => {
+          i = (i + 1) % words.length; el.innerHTML = html(words[i], '110%', 0);
+          requestAnimationFrame(() => requestAnimationFrame(() => q('span', el).forEach(s => { s.style.transform = 'none'; s.style.opacity = '1'; })));
+        }, 380);
+      }, 2200);
+      offs.push(() => clearInterval(id));
+    });
+
+    // ScrollReveal words
+    q('[data-words]').forEach(p => {
+      const ws = q('[data-w]', p);
+      if (!fine) ws.forEach(w => { w.style.filter = 'none'; });
+      const set = n => ws.forEach((w, i) => {
+        const k = Math.round(clamp(n - i, 0, 1) * 20) / 20; if (w._k === k) return; w._k = k;
+        w.style.opacity = String(0.12 + 0.88 * k); w.style.transform = k >= 1 ? 'none' : `rotate(${(1 - k) * 2}deg)`;
+        if (fine) w.style.filter = k >= 1 ? 'none' : `blur(${(1 - k) * 6}px)`;
+      });
+      if (reduce) { set(ws.length); return; }
+      fx.push(() => { const r = p.getBoundingClientRect(), vh = innerHeight; set(clamp((vh * 0.88 - r.top) / (r.height + vh * 0.3), 0, 1) * ws.length); });
+    });
+
+    // Reels sequence
+    const rs = doc.querySelector('[data-reels]');
+    if (rs) {
+      const strikes = q('[data-strike]', rs), bars = q('[data-bar]', rs), cols = q('[data-col]', rs), feed = rs.querySelector('[data-feed]');
+      const A = rs.querySelector('[data-phase-a]'), B = rs.querySelector('[data-phase-b]'), chips = q('[data-chip]', rs), tag = rs.querySelector('[data-tag]');
+      let lastKey = '';
+      const apply = p => {
+        const key = Math.round(p * 200); if (key === lastKey) return; lastKey = key;
+        strikes.forEach((l, i) => { const s = p > 0.1 + i * 0.08; bars[i].style.transform = `scaleX(${s ? 1 : 0})`; l.style.opacity = s ? '.25' : '1'; });
+        const frz = p > 0.5;
+        cols.forEach(c => { c.style.animationPlayState = frz ? 'paused' : 'running'; });
+        feed.style.opacity = frz ? '0' : '.4';
+        A.style.opacity = frz ? '0' : '1'; A.style.transform = frz ? 'translateY(-30px)' : 'none';
+        B.style.opacity = frz ? '1' : '0'; B.style.transform = frz ? 'none' : 'translateY(30px)';
+        chips.forEach((c, i) => { const o = p > 0.56 + i * 0.035; c.style.opacity = o ? '1' : '0'; c.style.transform = o ? 'none' : 'translateY(12px) scale(.96)'; });
+        if (tag) { const o = p > 0.88; tag.style.opacity = o ? '1' : '0'; tag.style.transform = o ? 'none' : 'translateY(12px)'; }
+      };
+      if (reduce) apply(1);
+      else fx.push(() => { const r = rs.getBoundingClientRect(); apply(clamp(-r.top / Math.max(1, r.height - innerHeight), 0, 1)); });
+    }
+
+    // TrueFocus
+    q('[data-tf]').forEach(root => {
+      const ws = q('[data-tfw]', root), fr = root.querySelector('[data-tff]'); let i = 0;
+      if (reduce) { fr.style.display = 'none'; return; }
+      const place = () => {
+        const w = ws[i]; ws.forEach(x => { const a = x === w; x.style.filter = a ? 'none' : 'blur(4px)'; x.style.opacity = a ? '1' : '.35'; });
+        const rr = root.getBoundingClientRect(), wr = w.getBoundingClientRect();
+        fr.style.left = (wr.left - rr.left - 12) + 'px'; fr.style.top = (wr.top - rr.top - 4) + 'px';
+        fr.style.width = (wr.width + 24) + 'px'; fr.style.height = (wr.height + 8) + 'px';
+      };
+      place(); on(W, 'resize', place); if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(place);
+      const id = setInterval(() => { i = (i + 1) % ws.length; place(); }, 2000); offs.push(() => clearInterval(id));
+    });
+
+    // Method: rows drive the loop diagram
+    const steps = q('[data-step]');
+    if (steps.length) {
+      const nodes = q('[data-node]'), lbls = q('[data-lbl]'), prog = doc.querySelector('[data-prog]'), back = doc.querySelector('[data-back]');
+      const cen = doc.querySelector('[data-loop-center]'), cnt = doc.querySelector('[data-loop-count]'); let last = -2;
+      fx.push(() => {
+        const mid = innerHeight * 0.55; let act = -1;
+        steps.forEach((s, i) => { if (s.getBoundingClientRect().top < mid) act = i; });
+        if (act === last) return; last = act;
+        steps.forEach((s, i) => { s.style.opacity = i === act ? '1' : (i < act ? '.5' : '.3'); });
+        nodes.forEach((n, i) => n.setAttribute('fill', i <= act ? '#fff' : '#000'));
+        lbls.forEach((n, i) => n.setAttribute('fill', i <= act ? '#fff' : 'rgba(255,255,255,.45)'));
+        if (prog) prog.style.strokeDashoffset = String(act < 0 ? 1 : 1 - act / 6);
+        if (back) back.style.opacity = act === steps.length - 1 ? '1' : '0';
+        const idx = Math.max(act, 0);
+        if (cen) cen.textContent = steps[idx].dataset.step;
+        if (cnt) cnt.textContent = String(idx + 1).padStart(2, '0') + ' / 06';
+      });
+    }
+
+    // Pillars grow on hover
+    const pills = q('[data-pillar]');
+    if (fine) pills.forEach(p => {
+      on(p, 'mouseenter', () => pills.forEach(o => { o.style.flexGrow = o === p ? '1.5' : '1'; }));
+      on(p, 'mouseleave', () => pills.forEach(o => { o.style.flexGrow = '1'; }));
+    });
+
+    // 3D tilt
+    if (fine && !reduce) q('[data-tilt]').forEach(el => {
+      const k = parseFloat(el.dataset.tilt) || 6, inner = el.querySelector('[data-tilt-inner]');
+      on(el, 'mousemove', e => {
+        const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = `perspective(1200px) rotateX(${-y * k}deg) rotateY(${x * k}deg)`;
+        if (inner) inner.style.transform = `translate3d(${-x * 24}px,${-y * 24}px,0) scale(1.05)`;
+      });
+      on(el, 'mouseleave', () => { el.style.transform = ''; if (inner) inner.style.transform = ''; });
+    });
+
+    // Hover reveal panels
+    q('[data-hovercard]').forEach(c => {
+      const p = c.querySelector('[data-hoverpanel]'); if (!p) return;
+      const show = () => { p.style.transform = 'none'; p.style.opacity = '1'; }, hide = () => { p.style.transform = 'translateY(110%)'; p.style.opacity = '0'; };
+      on(c, 'mouseenter', show); on(c, 'mouseleave', hide); on(c, 'focusin', show); on(c, 'focusout', hide);
+      if (!fine) on(c, 'click', e => { if (e.target.closest('a')) return; p.style.opacity === '1' ? hide() : show(); });
+    });
+
+    // ScrollVelocity
+    const vr = q('[data-vel]');
+    if (vr.length && !reduce) {
+      const st = vr.map(el => ({ el, x: 0, b: parseFloat(el.dataset.vel), half: 0 }));
+      const measure = () => st.forEach(s => { s.half = s.el.scrollWidth / 2; });
+      measure(); on(W, 'resize', measure); if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(measure);
+      let lastY = scrollY, boost = 0, lt = performance.now(), alive = true, vis = true, rid = 0; offs.push(() => { alive = false; });
+      if ('IntersectionObserver' in W) {
+        const vio = new IntersectionObserver(es => { vis = es.some(e => e.isIntersecting); if (vis && alive && !rid) { lt = performance.now(); lastY = scrollY; rid = requestAnimationFrame(fr); } }, { rootMargin: '100px 0px' });
+        vio.observe(vr[0].parentNode); offs.push(() => vio.disconnect());
+      }
+      const fr = t => {
+        rid = 0;
+        if (!alive || !vis) return;
+        const dt = Math.min(64, t - lt) / 1000; lt = t;
+        const dy = scrollY - lastY; lastY = scrollY; boost += (clamp(dy, -60, 60) - boost) * 0.1;
+        st.forEach(s => {
+          const half = s.half, dir = s.b >= 0 ? 1 : -1;
+          s.x -= (s.b + dir * Math.abs(boost) * 5) * dt;
+          if (half > 0) { if (s.x <= -half) s.x += half; if (s.x > 0) s.x -= half; }
+          s.el.style.transform = `translate3d(${s.x}px,0,0)`;
+        });
+        rid = requestAnimationFrame(fr);
+      };
+      rid = requestAnimationFrame(fr);
+    }
+
+    // ScrollStack (3D)
+    q('[data-stack]').forEach(w => {
+      const cards = q('[data-card]', w); if (reduce || cards.length < 2) return;
+      let tops = null, flat = false;
+      on(W, 'resize', () => { tops = null; });
+      fx.push(() => {
+        if (innerWidth < 900) { if (!flat) { flat = true; cards.forEach(c => { c.style.transform = ''; c.style.filter = ''; }); } return; }
+        flat = false;
+        if (!tops) tops = cards.map(c => parseFloat(getComputedStyle(c).top) || 100);
+        const vh = innerHeight, rects = cards.map(c => c.getBoundingClientRect().top);
+        cards.forEach((c, i) => {
+          let depth = 0;
+          for (let j = i + 1; j < cards.length; j++) depth += clamp((vh - rects[j]) / (vh - tops[j]), 0, 1);
+          const inc = clamp((rects[i] - tops[i]) / (vh * 0.8), 0, 1);
+          c.style.transform = `perspective(1600px) rotateX(${inc * 12}deg) scale(${(1 - depth * 0.05).toFixed(4)})`;
+          c.style.filter = depth > 0.05 ? `brightness(${(1 - depth * 0.3).toFixed(3)})` : '';
+        });
+      });
+    });
+
+    // DecryptedText
+    if (!reduce && 'IntersectionObserver' in W) {
+      const cs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      const io2 = new IntersectionObserver(es => es.forEach(en => {
+        if (!en.isIntersecting) return; io2.unobserve(en.target);
+        const el = en.target, fin = el.textContent; let n = 0;
+        const t = setInterval(() => {
+          n++; el.textContent = fin.split('').map((c, i) => (i < n || c === ' ' || c === '·') ? c : cs[Math.floor(Math.random() * cs.length)]).join('');
+          if (n >= fin.length) { clearInterval(t); el.textContent = fin; }
+        }, 45);
+        offs.push(() => clearInterval(t));
+      }));
+      q('[data-decrypt]').forEach(e => io2.observe(e)); offs.push(() => io2.disconnect());
+    }
+
+    // TextType
+    q('[data-type]').forEach(el => {
+      const list = el.dataset.type.split('|');
+      if (reduce) { el.textContent = list[0]; return; }
+      let li = 0, ci = 0, del = false, tid;
+      const sch = ms => { tid = setTimeout(step, ms); };
+      const step = () => {
+        const w = list[li];
+        if (!del) { ci++; el.textContent = w.slice(0, ci); if (ci >= w.length) { del = true; return sch(1900); } return sch(55); }
+        ci--; el.textContent = w.slice(0, ci); if (ci <= 0) { del = false; li = (li + 1) % list.length; return sch(400); } sch(24);
+      };
+      sch(700); offs.push(() => clearTimeout(tid));
+    });
+
+    // SpotlightCard
+    if (fine) q('[data-spot]').forEach(c => on(c, 'mousemove', e => { const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
+
+    // Magnet
+    if (fine && !reduce) {
+      const ms = q('[data-magnet]');
+      on(W, 'mousemove', e => ms.forEach(el => {
+        const r = el.getBoundingClientRect(), dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+        if (Math.abs(dx) < r.width / 2 + 150 && Math.abs(dy) < r.height / 2 + 150) { el.style.transition = 'transform .3s ease-out'; el.style.transform = `translate3d(${dx / 6}px,${dy / 6}px,0)`; }
+        else { el.style.transition = 'transform .6s ease-in-out'; el.style.transform = ''; }
+      }), { passive: true });
+    }
+
+    // Forest scroll zoom
+    q('[data-zoom]').forEach(sec => {
+      const m = sec.querySelector('[data-zoom-media]'); if (!m || reduce) return;
+      fx.push(() => { const r = sec.getBoundingClientRect(), p = clamp((innerHeight - r.top) / (innerHeight + r.height), 0, 1); m.style.transform = `scale(${(1 + p * 0.08).toFixed(4)})`; });
+    });
+
+    // Pause CSS animations in sections that are off-screen
+    if ('IntersectionObserver' in W) {
+      const io3 = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) en.target.removeAttribute('data-off'); else en.target.setAttribute('data-off', ''); }), { rootMargin: '200px 0px' });
+      q('section').forEach(e => io3.observe(e)); offs.push(() => io3.disconnect());
+    }
+
+    run(); on(W, 'load', req);
+    if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(req);
+  }
+  componentWillUnmount() { (this._offs || []).forEach(f => f()); }
+  renderVals() {
+    const vis = 'Likes, views, and followers can be useful. But growth starts deeper. We understand the business first, identify the gaps, build a strategy around them — then execute, measure, and adapt until we find what works.';
+    const story = "Before Hozeh, there was music. Nirmal and Allan met through a Bangalore gig — Nirmal was leading his band, the singer wasn't available, and a violinist introduced Allan. Allan joined the band. The two became close, and while still in college they started thinking about building something of their own. Music taught them something unexpectedly valuable: how to sell. Every gig meant communicating value, pitching their skills, and proving why someone should choose them. They took that instinct beyond the stage. Hozeh was born.";
+    const chipLabels = ['Understand the business', 'Find opportunities', 'Reach the right people', 'Create demand', 'Build trust', 'Generate leads', 'Convert customers', 'Grow'];
+    return {
+      visWords: vis.split(' '),
+      tiles: Array.from({ length: 12 }, (_, i) => i),
+      chips: chipLabels.map((label, i) => ({ label, bg: i === chipLabels.length - 1 ? '#fff' : 'rgba(255,255,255,.05)', color: i === chipLabels.length - 1 ? '#000' : '#fff' })),
+      steps: [
+        { n: '01', name: 'Understand', title: 'UNDERSTAND', desc: 'We learn how the business works, who it serves, what it sells, and where it wants to go.' },
+        { n: '02', name: 'Diagnose', title: 'DIAGNOSE', desc: 'We identify gaps, opportunities, bottlenecks, and areas where growth can be improved.' },
+        { n: '03', name: 'Strategize', title: 'STRATEGIZE', desc: 'We develop a plan designed around the actual problem — not a pre-packaged service.' },
+        { n: '04', name: 'Execute', title: 'EXECUTE', desc: 'We put the strategy into motion through marketing, creative, technology, business development — or a combination.' },
+        { n: '05', name: 'Measure', title: 'MEASURE', desc: 'We study what is actually happening.' },
+        { n: '06', name: 'Evolve', title: 'EVOLVE', desc: "If something works, we build on it. If something doesn't, we change the plan." }
+      ],
+      rowA: 'Strategy • Brand & Identity • Content • Social • Campaigns • Performance • PR • Lead Generation • Business Development • Personal Branding •',
+      rowB: 'Websites • Web Apps • Software • AI & ML • AI Agents • Automation • Data & Analytics • APIs & Integrations • Digital Products • Custom Systems •',
+      cases: [
+        { n: '01', top: '96px', cat: 'HOSPITALITY · GROWTH · MARKETING', client: 'Chai Sutta Bar', title: 'Finding the gaps behind the counter.', href: 'Work.dc.html#chai-sutta-bar', aria: 'Open the Chai Sutta Bar case study',
+          scope: ['Business gap identification', 'Customer acquisition', 'Promotional coupon partnerships', 'Cross-business promotion', 'Product sales analysis', 'Inventory planning', 'Menu strategy', 'Corporate bulk-order outreach', 'Event-management outreach', 'Campaigns', 'Posters', 'Reels', 'Entertainment content'],
+          outcome: 'Significant daily revenue growth · Reels with millions of views' },
+        // TODO confirm permission: Magic Box, Uno Minda
+        { n: '02', top: '124px', cat: 'RETAIL · B2B · CAMPAIGNS', client: 'Magic Box', title: 'Turning products into opportunities.', href: 'Work.dc.html#magic-box', aria: 'Open the Magic Box case study',
+          scope: ['Product shoots', 'Promotional & entertainment reels', 'Festive campaigns', 'Product promotion', 'Corporate outreach', 'Bulk-order acquisition', 'School campaigns', 'B2B opportunities'],
+          outcome: 'Bulk-order opportunities with companies incl. Uno Minda' },
+        // TODO confirm permission: Koodeswaran Constructions
+        { n: '03', top: '152px', cat: 'REAL ESTATE · LEAD GENERATION', client: 'Koodeswaran Constructions', title: 'Turning projects into leads.', href: 'Work.dc.html#koodeswaran', aria: 'Open the Koodeswaran Constructions case study',
+          scope: ['Project promotion', 'Site advertisements', 'Promotional reels', 'Lead generation', 'Offline lead acquisition'],
+          outcome: 'From attention to enquiry' }
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

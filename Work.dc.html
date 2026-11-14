@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Our Work — Hozeh</title>
+<meta name="description" content="Hozeh is a marketing and technology company that helps businesses build stronger brands, create demand, and grow through strategy, creativity, and technology.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Roboto+Flex:opsz,wght,wdth@8..144,100..1000,25..151&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#000;color:#fff}
+body{font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:#fff;text-decoration:none}a:hover{color:#fff}
+::selection{background:hsl(272 85% 62%);color:#fff}
+:focus-visible{outline:2px solid hsl(272 70% 60%);outline-offset:3px}
+@keyframes hzTravel{0%{left:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes hzFadeIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+</style>
+</helmet>
+<dc-import name="SiteNav" active="work" hint-size="100%,1px"></dc-import>
+<main id="main">
+<section data-recede="1" aria-labelledby="work-h" data-screen-label="Work hero" style="position:relative;height:84vh;height:84svh;min-height:600px;background:#000">
+<div data-recede-screen="1" data-life="1" style="position:absolute;inset:0;overflow:hidden;transform-origin:50% 100%">
+<dc-import name="BgVideo" src="assets/video/hf_20260325_125119_8e5ae31c-0021-4396-bc08-f7aebeb877a2.mp4" treatment="duotone" tint="{{ 0.18 }}" eager="{{ true }}" hint-size="100%,100%" style="position:absolute;inset:0"></dc-import>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(to top, #000 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.2) 100%),linear-gradient(90deg, rgba(0,0,0,.6), transparent 60%)"></div>
+</div>
+<div data-recede-content="1" style="position:absolute;left:0;right:0;bottom:0;padding-bottom:clamp(48px,8vh,96px)">
+<div style="max-width:1920px;margin:0 auto;padding:0 clamp(20px,3vw,44px);display:flex;flex-direction:column;gap:24px">
+<span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.6)">HOZEH / WORK</span>
+<h1 id="work-h" data-split="1" style="margin:0;font-size:clamp(3rem,9vw,8.5rem);font-weight:500;letter-spacing:-0.05em;line-height:.9"><span style="display:block;overflow:hidden;padding-bottom:.2em;margin-bottom:-.2em;padding-right:.1em"><span data-lni="1" style="display:block">Selected <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">work.</em></span></span></h1>
+<p data-in=".3" style="margin:0;max-width:34rem;font-size:clamp(1.05rem,1.4vw,1.3rem);line-height:1.55;color:rgba(239,242,245,.82)">Different businesses require different answers.</p>
+</div>
+</div>
+</section>
+
+<div style="position:sticky;top:88px;z-index:20;padding:18px 0;pointer-events:none">
+<div role="group" aria-label="Filter case studies" style="max-width:1920px;margin:0 auto;padding:0 clamp(20px,3vw,44px);display:flex;flex-wrap:wrap;gap:6px;pointer-events:auto">
+<div style="display:flex;flex-wrap:wrap;gap:4px;padding:5px;border-radius:999px;background:rgba(12,12,12,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.08)">
+<sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+<button type="button" onClick="{{ f.pick }}" aria-pressed="{{ f.pressed }}" style="border:none;cursor:pointer;height:38px;padding:0 18px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;background:{{ f.bg }};color:{{ f.color }};transition:background .35s cubic-bezier(.16,1,.3,1), color .35s ease">{{ f.label }}</button>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="max-width:1920px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(20px,3vw,44px) clamp(80px,10vw,140px);display:flex;flex-direction:column;gap:clamp(90px,11vw,160px)">
+
+<sc-if value="{{ show.chai }}" hint-placeholder-val="{{ true }}">
+<article id="chai-sutta-bar" aria-labelledby="cs1-h" style="display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,80px);align-items:flex-start;animation:hzFadeIn .7s cubic-bezier(.16,1,.3,1) both;scroll-margin-top:160px">
+<dl data-dsticky="1" style="flex:0 1 320px;min-width:min(260px,100%);position:sticky;top:170px;margin:0;display:flex;flex-direction:column;gap:22px;padding:26px;border-radius:24px;background:rgba(255,255,255,.03);box-shadow:inset 0 1px 1px rgba(255,255,255,.12), inset 0 0 0 1px rgba(255,255,255,.08)">
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">CLIENT</dt><dd style="margin:6px 0 0;font-size:17px">Chai Sutta Bar · Chennai</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">CHALLENGE</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Grow the business beyond what content alone could deliver.</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">APPROACH</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Find the gaps first — then combine partnerships, product analysis, outreach, and content.</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">WORK</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Growth · Marketing · Creative</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">OUTCOME</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5">Significant daily revenue improvement · Reels reaching millions of views</dd></div>
+</dl>
+<div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+<span style="font-family:'Anton',sans-serif;font-size:clamp(3rem,7vw,6.5rem);line-height:.8">01</span>
+<h2 id="cs1-h" style="margin:0;font-size:clamp(2.25rem,5vw,4.75rem);font-weight:500;letter-spacing:-0.045em;line-height:.98">Chai Sutta Bar — <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">Beyond the Reel.</em></h2>
+<div style="position:relative;aspect-ratio:16/9;border-radius:32px;overflow:hidden;background:#000 repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 1px, transparent 1px 14px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);display:grid;place-items:center"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.4);text-align:center;padding:0 20px">PROJECT VISUAL — ADD WITH CLIENT PERMISSION</span></div>
+
+<div style="padding:clamp(22px,3vw,40px);border-radius:32px;background:#050505;border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55)">THE COUPON-PARTNERSHIP LOOP</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.4)">VALUE FOR BOTH SIDES</span></div>
+<div data-coupon="1" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));gap:12px">
+<div aria-hidden="true" style="position:absolute;left:6%;right:6%;top:50%;height:1px;background:rgba(255,255,255,.18)"><i style="position:absolute;top:-3px;width:7px;height:7px;border-radius:9px;background:#fff;box-shadow:0 0 12px #fff;animation:hzTravel 4.5s linear infinite"></i></div>
+<sc-for list="{{ loop }}" as="n" hint-placeholder-count="5">
+<div data-cnode="1" style="position:relative;padding:18px 16px;border-radius:20px;background:rgba(12,12,12,.9);box-shadow:inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.1);display:flex;flex-direction:column;gap:8px;transition:box-shadow .4s ease, background .4s ease">
+<span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.5)">{{ n.n }}</span>
+<b style="font-weight:500;font-size:15px;line-height:1.3">{{ n.t }}</b>
+</div>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px">
+<div style="padding:18px 20px;border-radius:18px;border:1px dashed rgba(255,255,255,.2)"><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.5)">FOR THE PARTNER</span><p style="margin:8px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.82)">A free perk to give its own customers — extra value at no cost.</p></div>
+<div style="padding:18px 20px;border-radius:18px;border:1px dashed rgba(255,255,255,.2)"><span style="font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.5)">FOR CHAI SUTTA BAR</span><p style="margin:8px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.82)">New customers walking in who might never have found it.</p></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px 40px;font-size:16px;line-height:1.6;color:rgba(255,255,255,.75)">
+<div><h3 style="margin:0 0 8px;font-size:18px;font-weight:500;color:#fff">Product &amp; inventory analysis</h3><p style="margin:0">Studying what sells, planning inventory around it, and shaping the menu strategy.</p></div>
+<div><h3 style="margin:0 0 8px;font-size:18px;font-weight:500;color:#fff">Corporate &amp; event orders</h3><p style="margin:0">Outreach to companies for bulk orders and to event managers for new channels of demand.</p></div>
+<div><h3 style="margin:0 0 8px;font-size:18px;font-weight:500;color:#fff">Content</h3><p style="margin:0">Campaigns, posters, reels, and entertainment content — one part of the strategy, not the whole of it.</p></div>
+</div>
+</div>
+</article>
+</sc-if>
+
+<!-- TODO confirm permission: Magic Box, Uno Minda -->
+<sc-if value="{{ show.magic }}" hint-placeholder-val="{{ true }}">
+<article id="magic-box" aria-labelledby="cs2-h" style="display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,80px);align-items:flex-start;animation:hzFadeIn .7s cubic-bezier(.16,1,.3,1) both;scroll-margin-top:160px">
+<dl data-dsticky="1" style="flex:0 1 320px;min-width:min(260px,100%);position:sticky;top:170px;margin:0;display:flex;flex-direction:column;gap:22px;padding:26px;border-radius:24px;background:rgba(255,255,255,.03);box-shadow:inset 0 1px 1px rgba(255,255,255,.12), inset 0 0 0 1px rgba(255,255,255,.08)">
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">CLIENT</dt><dd style="margin:6px 0 0;font-size:17px">Magic Box</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">CHALLENGE</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Turn a product range into real business opportunities.</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">APPROACH</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Creative that shows the products, paired with outreach that puts them in front of buyers.</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">WORK</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Retail · B2B · Campaigns</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">OUTCOME</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5">Bulk-order opportunities with companies incl. Uno Minda</dd></div>
+</dl>
+<div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+<span style="font-family:'Anton',sans-serif;font-size:clamp(3rem,7vw,6.5rem);line-height:.8">02</span>
+<h2 id="cs2-h" style="margin:0;font-size:clamp(2.25rem,5vw,4.75rem);font-weight:500;letter-spacing:-0.045em;line-height:.98">Magic Box — <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">From Products to Opportunities.</em></h2>
+<div style="position:relative;aspect-ratio:16/9;border-radius:32px;overflow:hidden;background:#000 repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 1px, transparent 1px 14px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);display:grid;place-items:center"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.4);text-align:center;padding:0 20px">PROJECT VISUAL — ADD WITH CLIENT PERMISSION</span></div>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ magicScope }}" as="s" hint-placeholder-count="8"><li style="padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)">{{ s }}</li></sc-for></ul>
+</div>
+</article>
+</sc-if>
+
+<!-- TODO confirm permission: Koodeswaran Constructions -->
+<sc-if value="{{ show.kood }}" hint-placeholder-val="{{ true }}">
+<article id="koodeswaran" aria-labelledby="cs3-h" style="display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,80px);align-items:flex-start;animation:hzFadeIn .7s cubic-bezier(.16,1,.3,1) both;scroll-margin-top:160px">
+<dl data-dsticky="1" style="flex:0 1 320px;min-width:min(260px,100%);position:sticky;top:170px;margin:0;display:flex;flex-direction:column;gap:22px;padding:26px;border-radius:24px;background:rgba(255,255,255,.03);box-shadow:inset 0 1px 1px rgba(255,255,255,.12), inset 0 0 0 1px rgba(255,255,255,.08)">
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">CLIENT</dt><dd style="margin:6px 0 0;font-size:17px">Koodeswaran Constructions</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">CHALLENGE</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Turn construction projects into enquiries.</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">APPROACH</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Promote the projects online and on site, and capture leads both digitally and offline.</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">WORK</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.8)">Real estate · Lead generation</dd></div>
+<div><dt style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">OUTCOME</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.5">From attention to enquiry</dd></div>
+</dl>
+<div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+<span style="font-family:'Anton',sans-serif;font-size:clamp(3rem,7vw,6.5rem);line-height:.8">03</span>
+<h2 id="cs3-h" style="margin:0;font-size:clamp(2.25rem,5vw,4.75rem);font-weight:500;letter-spacing:-0.045em;line-height:.98">Koodeswaran Constructions — <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">From Projects to Leads.</em></h2>
+<div style="position:relative;aspect-ratio:16/9;border-radius:32px;overflow:hidden;background:#000 repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 1px, transparent 1px 14px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);display:grid;place-items:center"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.4);text-align:center;padding:0 20px">PROJECT VISUAL — ADD WITH CLIENT PERMISSION</span></div>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ koodScope }}" as="s" hint-placeholder-count="5"><li style="padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)">{{ s }}</li></sc-for></ul>
+</div>
+</article>
+</sc-if>
+
+<sc-if value="{{ show.qc }}" hint-placeholder-val="{{ true }}">
+<article id="quadrant-cross" aria-labelledby="cs4-h" data-spot="1" style="position:relative;overflow:hidden;max-width:880px;padding:clamp(28px,3.5vw,48px);border-radius:32px;background:#000;border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:18px;animation:hzFadeIn .7s cubic-bezier(.16,1,.3,1) both">
+<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx,-500px) var(--my,-500px), rgba(155,77,255,.18), transparent 60%)"></div>
+<span style="position:relative;align-self:flex-start;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.8)">VIA PARTNER AGENCY</span>
+<h2 id="cs4-h" style="position:relative;margin:0;font-size:clamp(1.9rem,3.4vw,3rem);font-weight:500;letter-spacing:-0.035em">Quadrant Cross — <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">Collaboration.</em></h2>
+<p style="position:relative;margin:0;max-width:40rem;font-size:17px;line-height:1.6;color:rgba(255,255,255,.75)">Hozeh has worked alongside Quadrant Cross, a marketing agency, on selected projects including website development and SEO for clients in the pet-care space.</p>
+</article>
+</sc-if>
+</div>
+<dc-import name="FinalCta" hint-size="100%,100svh"></dc-import>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,640px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { filter: 'all' };
+  componentDidMount() {
+    import(new URL('hz-fx.js', location.href).href).then(m => { if (!this._dead) this.fx = m.initFx(); });
+    let i = 0;
+    this.iv = setInterval(() => {
+      const nodes = document.querySelectorAll('[data-cnode]'); if (!nodes.length) return;
+      nodes.forEach((n, k) => {
+        const lit = k === i;
+        n.style.background = lit ? 'rgba(255,255,255,.12)' : 'rgba(12,12,12,.9)';
+        n.style.boxShadow = lit ? 'inset 0 1px 1px rgba(255,255,255,.3), inset 0 0 0 1px rgba(255,255,255,.5), 0 0 40px -10px hsl(272 85% 62% / .6)' : 'inset 0 1px 1px rgba(255,255,255,.14), inset 0 0 0 1px rgba(255,255,255,.1)';
+      });
+      i = (i + 1) % nodes.length;
+    }, 900);
+  }
+  componentWillUnmount() { this._dead = true; clearInterval(this.iv); this.fx && this.fx.cleanup(); }
+  renderVals() {
+    const f = this.state.filter;
+    const tags = { chai: ['growth', 'creative'], magic: ['creative', 'b2b', 'growth'], kood: ['leadgen', 'creative'], qc: ['b2b'] };
+    const show = {}; Object.keys(tags).forEach(k => { show[k] = f === 'all' || tags[k].includes(f); });
+    const defs = [['All', 'all'], ['Growth', 'growth'], ['Creative', 'creative'], ['B2B', 'b2b'], ['Lead Gen', 'leadgen']];
+    return {
+      show,
+      filters: defs.map(([label, key]) => ({ label, pressed: f === key ? 'true' : 'false', bg: f === key ? '#fff' : 'transparent', color: f === key ? '#000' : 'rgba(255,255,255,.8)', pick: () => this.setState({ filter: key }) })),
+      loop: [
+        { n: '01', t: 'Partner business' },
+        { n: '02', t: 'Gives a free coupon' },
+        { n: '03', t: 'To its customers' },
+        { n: '04', t: 'They visit Chai Sutta Bar' },
+        { n: '05', t: 'New traffic' }
+      ],
+      magicScope: ['Product shoots', 'Promotional & entertainment reels', 'Festive campaigns', 'Product promotion', 'Corporate outreach', 'Bulk-order acquisition', 'School campaigns', 'B2B opportunities'],
+      koodScope: ['Project promotion', 'Site advertisements', 'Promotional reels', 'Lead generation', 'Offline lead acquisition']
+    };
+  }
+}
+</script>
+</body>
+</html>

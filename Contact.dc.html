@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Start a Conversation — Hozeh</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Roboto+Flex:opsz,wght,wdth@8..144,100..1000,25..151&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#000;color:#fff}
+body{font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:#fff;text-decoration:none}a:hover{color:#fff}
+::selection{background:hsl(272 85% 62%);color:#fff}
+:focus-visible{outline:2px solid hsl(272 70% 60%);outline-offset:3px}
+input:focus,textarea:focus{outline:none;border-color:hsl(272 70% 60%)!important;box-shadow:0 0 0 3px hsl(272 70% 60% / .35)}
+@keyframes hzSpin{to{transform:rotate(360deg)}}
+</style>
+</helmet>
+<dc-import name="SiteNav" active="contact" hint-size="100%,1px"></dc-import>
+<main id="main" style="position:relative;min-height:100vh;min-height:100svh;overflow:hidden">
+<canvas ref="{{ canvasRef }}" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:.35;pointer-events:none"></canvas>
+<div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(60% 50% at 20% 30%, hsl(272 85% 62% / .12), transparent 70%),linear-gradient(transparent 70%, #000)"></div>
+<div style="position:relative;max-width:1920px;margin:0 auto;padding:160px clamp(20px,3vw,44px) clamp(80px,10vw,140px);display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,96px);align-items:flex-start">
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:26px">
+<span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.6)">HOZEH / CONTACT</span>
+<h1 style="margin:0;font-size:clamp(3rem,7.5vw,7rem);font-weight:500;letter-spacing:-0.05em;line-height:.92"><em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">Start</em> a Conversation.</h1>
+<p style="margin:0;max-width:34rem;font-size:clamp(1.05rem,1.35vw,1.25rem);line-height:1.6;color:#D7E2EA">Have a business to grow? A product to build? A problem you haven't figured out yet? Tell us what you're working on. We'll figure out where to start.</p>
+<div style="display:flex;flex-direction:column;gap:22px;margin-top:20px">
+<div><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.5)">EMAIL</span><br><!-- TODO confirm address --><a href="mailto:hello@hozeh.com" style="font-size:22px">hello@hozeh.com</a></div>
+<div style="display:flex;gap:18px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em"><a href="https://www.instagram.com/">INSTAGRAM</a><a href="https://www.linkedin.com/">LINKEDIN</a><a href="https://github.com/">GITHUB</a></div>
+<!-- TODO confirm response time -->
+<span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55)">RESPONSE WITHIN 1–2 BUSINESS DAYS</span>
+</div>
+</div>
+<div style="flex:1 1 480px;min-width:0;padding:clamp(22px,3vw,34px);border-radius:32px;background:rgba(255,255,255,.03);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 1px 1px rgba(255,255,255,.16), inset 0 0 0 1px rgba(255,255,255,.1)">
+<sc-if value="{{ done }}" hint-placeholder-val="{{ false }}">
+<div role="status" style="min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px">
+<svg viewBox="440 430 920 940" width="64" height="66" aria-hidden="true" style="filter:drop-shadow(0 0 18px rgba(255,255,255,.55)) drop-shadow(0 0 60px hsl(272 85% 62% / .45))"><path fill="#fff" d="M455 665H740V765.6L455 977.7ZM455 1041.25L665 1330L740 1273.4V1360H455ZM1060 440H1345V743L1140 468L1060 527.5ZM1060 1031.7L1345 816.4V1135H1060ZM520 1020L1125 570L1280 780L675 1228Z"></path></svg>
+<h2 style="margin:0;font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:44px">Thanks for reaching out.</h2>
+<p style="margin:0;color:rgba(255,255,255,.75)">We've got your message. We'll be in touch soon.</p>
+</div>
+</sc-if>
+<sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+<ol aria-label="Progress" style="list-style:none;margin:0 0 28px;padding:0;display:flex;align-items:center;gap:10px">
+<sc-for list="{{ dots }}" as="d" hint-placeholder-count="3"><li aria-current="{{ d.cur }}" style="display:flex;align-items:center;gap:10px;flex:1"><span style="width:30px;height:30px;border-radius:999px;display:grid;place-items:center;font-family:'Geist Mono',monospace;font-size:11px;background:{{ d.bg }};color:{{ d.color }};border:1px solid rgba(255,255,255,.3);transition:background .4s ease">{{ d.n }}</span><i style="flex:1;height:1px;background:rgba(255,255,255,.15)"></i></li></sc-for>
+</ol>
+<sc-if value="{{ s0 }}" hint-placeholder-val="{{ true }}">
+<h2 style="margin:0 0 18px;font-size:24px;font-weight:500">What can we help you with?</h2>
+<div role="radiogroup" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px">
+<sc-for list="{{ intents }}" as="o" hint-placeholder-count="4"><button type="button" role="radio" aria-checked="{{ o.checked }}" onClick="{{ o.pick }}" style="text-align:left;cursor:pointer;min-height:96px;padding:18px;border-radius:20px;border:1px solid {{ o.border }};background:{{ o.bg }};color:#fff;font:500 17px 'Geist',sans-serif;transition:all .3s ease">{{ o.label }}</button></sc-for>
+</div>
+</sc-if>
+<sc-if value="{{ s1 }}" hint-placeholder-val="{{ false }}">
+<h2 style="margin:0 0 18px;font-size:24px;font-weight:500">Tell us about your project</h2>
+<label style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.6)">WHAT ARE YOU WORKING ON?<textarea value="{{ f.message }}" onChange="{{ onMessage }}" rows="6" aria-invalid="{{ err.messageInv }}" style="padding:14px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#fff;font:16px/1.5 'Geist',sans-serif;resize:vertical"></textarea></label>
+<p role="alert" style="margin:6px 0 0;min-height:18px;font-size:13px;color:#e8c9ff">{{ err.message }}</p>
+<label style="margin-top:10px;display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.6)">WEBSITE / SOCIAL (OPTIONAL)<input value="{{ f.link }}" onChange="{{ onLink }}" style="height:48px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#fff;font:16px 'Geist',sans-serif"></label>
+</sc-if>
+<sc-if value="{{ s2 }}" hint-placeholder-val="{{ false }}">
+<h2 style="margin:0 0 18px;font-size:24px;font-weight:500">Your details</h2>
+<div style="display:flex;flex-direction:column;gap:12px">
+<label style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.6)">NAME<input value="{{ f.name }}" onChange="{{ onName }}" autocomplete="name" aria-invalid="{{ err.nameInv }}" style="height:48px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#fff;font:16px 'Geist',sans-serif"></label>
+<p role="alert" style="margin:0;min-height:16px;font-size:13px;color:#e8c9ff">{{ err.name }}</p>
+<label style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.6)">COMPANY / BRAND<input value="{{ f.company }}" onChange="{{ onCompany }}" autocomplete="organization" style="height:48px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#fff;font:16px 'Geist',sans-serif"></label>
+<label style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.6)">EMAIL<input type="email" value="{{ f.email }}" onChange="{{ onEmail }}" autocomplete="email" aria-invalid="{{ err.emailInv }}" style="height:48px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#fff;font:16px 'Geist',sans-serif"></label>
+<p role="alert" style="margin:0;min-height:16px;font-size:13px;color:#e8c9ff">{{ err.email }}</p>
+</div>
+</sc-if>
+<div style="margin-top:26px;display:flex;gap:10px">
+<sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ back }}" style="height:54px;padding:0 22px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font:500 15px 'Geist',sans-serif;cursor:pointer">Back</button></sc-if>
+<button type="button" onClick="{{ next }}" disabled="{{ sending }}" style="flex:1;height:54px;border-radius:999px;border:none;background:#fff;color:#000;font:500 16px 'Geist',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:box-shadow .3s ease" style-hover="box-shadow:0 0 40px -8px hsl(272 85% 62% / .6)"><sc-if value="{{ sending }}" hint-placeholder-val="{{ false }}"><span aria-label="Sending" style="width:20px;height:20px;border-radius:99px;border:2px solid rgba(0,0,0,.2);border-top-color:#000;animation:hzSpin .8s linear infinite"></span></sc-if><sc-if value="{{ notSending }}" hint-placeholder-val="{{ true }}">{{ nextLabel }}</sc-if></button>
+</div>
+</sc-if>
+</div>
+</div>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,640px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  canvasRef = React.createRef();
+  state = { step: 0, intent: 'grow', f: { message: '', link: '', name: '', company: '', email: '' }, err: {}, sending: false, done: false };
+  componentDidMount() {
+    const map = { grow: 'grow', build: 'build', both: 'both', unsure: 'unsure' };
+    const p = new URLSearchParams(location.search).get('intent'); if (p && map[p]) this.setState({ intent: p });
+    const c = this.canvasRef.current; if (!c) return;
+    const ctx = c.getContext('2d'); let mx = 0.5, t = 0, alive = true, vis = true, rid = 0, lastW = 0;
+    // Resize only when the width changes (mobile URL bar show/hide changes height and used to clear the canvas mid-scroll)
+    const size = () => { const w = c.offsetWidth; if (w === lastW) return; lastW = w; c.width = w; c.height = c.offsetHeight; };
+    size(); window.addEventListener('resize', size); this.onRs = size;
+    const reduce = (window.HZ_HONOR_REDUCED_MOTION===true&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this.onMv = e => { mx = e.clientX / innerWidth; }; window.addEventListener('mousemove', this.onMv, { passive: true });
+    const draw = () => {
+      if (!alive) return; t += 0.006; const w = c.width, h = c.height; ctx.clearRect(0, 0, w, h);
+      for (let i = 0; i < 28; i++) {
+        ctx.beginPath(); ctx.strokeStyle = `rgba(255,255,255,${0.12 + (i / 28) * 0.5})`; ctx.lineWidth = 1;
+        for (let x = 0; x <= w; x += 12) {
+          const k = x / w, amp = 0.8 * h * 0.12 * Math.sin(k * Math.PI);
+          const y = h * 0.55 + i * h * 0.1 * 0.12 + Math.sin(k * 6 + t * 3 + i * 0.25) * amp * (0.6 + mx * 0.6) + Math.cos(k * 3 - t + i * 0.1) * amp * 0.4;
+          x ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+        }
+        ctx.stroke();
+      }
+      rid = (vis && !reduce) ? requestAnimationFrame(draw) : 0;
+    };
+    if ('IntersectionObserver' in window) {
+      this.cio = new IntersectionObserver(es => { vis = es[0].isIntersecting; if (vis && alive && !rid && !reduce) rid = requestAnimationFrame(draw); });
+      this.cio.observe(c);
+    }
+    draw(); this.stop = () => { alive = false; this.cio && this.cio.disconnect(); };
+  }
+  componentWillUnmount() { this.stop && this.stop(); window.removeEventListener('resize', this.onRs); window.removeEventListener('mousemove', this.onMv); }
+  setF(k, v) { this.setState(s => ({ f: { ...s.f, [k]: v }, err: { ...s.err, [k]: '' } })); }
+  validate(step) {
+    const f = this.state.f, err = {};
+    if (step === 1 && f.message.trim().length < 5) err.message = 'Tell us a little about the project to continue.';
+    if (step === 2) { if (!f.name.trim()) err.name = 'Please add your name.'; if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.trim())) err.email = 'Please add a valid email so we can reply.'; }
+    this.setState({ err }); return !Object.keys(err).length;
+  }
+  // TODO: wire to Formspree or Resend, e.g. fetch('https://formspree.io/f/YOUR_ID', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data)})
+  submitContact(data) { return new Promise(r => setTimeout(r, 900)); }
+  renderVals() {
+    const s = this.state, labels = [['Grow my business', 'grow'], ['Build something', 'build'], ['Both', 'both'], ["I'm not sure yet", 'unsure']];
+    return {
+      canvasRef: this.canvasRef, done: s.done, notDone: !s.done, f: s.f,
+      err: { ...s.err, messageInv: s.err.message ? 'true' : 'false', nameInv: s.err.name ? 'true' : 'false', emailInv: s.err.email ? 'true' : 'false' },
+      s0: s.step === 0, s1: s.step === 1, s2: s.step === 2, canBack: s.step > 0,
+      sending: s.sending, notSending: !s.sending, nextLabel: s.step === 2 ? 'Start a Conversation' : 'Continue',
+      dots: [0, 1, 2].map(i => ({ n: String(i + 1).padStart(2, '0'), cur: i === s.step ? 'step' : undefined, bg: i === s.step ? 'hsl(272 85% 62%)' : (i < s.step ? '#fff' : 'transparent'), color: i < s.step ? '#000' : '#fff' })),
+      intents: labels.map(([label, key]) => ({ label, checked: s.intent === key ? 'true' : 'false', bg: s.intent === key ? 'rgba(255,255,255,.12)' : 'rgba(255,255,255,.03)', border: s.intent === key ? 'rgba(255,255,255,.7)' : 'rgba(255,255,255,.12)', pick: () => this.setState({ intent: key }) })),
+      onMessage: e => this.setF('message', e.target.value), onLink: e => this.setF('link', e.target.value),
+      onName: e => this.setF('name', e.target.value), onCompany: e => this.setF('company', e.target.value), onEmail: e => this.setF('email', e.target.value),
+      back: () => this.setState({ step: Math.max(0, s.step - 1) }),
+      next: () => {
+        if (!this.validate(s.step)) return;
+        if (s.step < 2) return this.setState({ step: s.step + 1 });
+        this.setState({ sending: true });
+        this.submitContact({ intent: s.intent, ...s.f }).then(() => this.setState({ sending: false, done: true }));
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
